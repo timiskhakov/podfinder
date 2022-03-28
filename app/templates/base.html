@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="/www/css/semantic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="/www/css/podfinder.css"/>
+  <script src="/www/js/jquery.min.js"></script>
+  <script src="/www/js/semantic.min.js"></script>
+  <script src="/www/js/podfinder.js"></script>
+  <title>PodFinder — search and explore podcasts</title>
+</head>
+
+<body>
+  <div class="ui text container">
+    <div class="ui text menu">
+      <div class="item">
+        <a href="/">PodFinder</a>
+      </div>
+      <div class="right menu">
+        <form class="ui form" name="regions" action="/" method="post">
+          <div class="field">
+            <select name="region" onchange="this.form.submit()">
+              {{range .Regions}}
+                {{if eq .Value $.Region}}
+                <option value="{{.Value}}" selected>{{.Name}}</option>
+                {{else}}
+                <option value="{{.Value}}">{{.Name}}</option>
+                {{end}}
+              {{end}}
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+    {{template "content" .}}
+    </div>
+  </div>
+</body>
+</html>

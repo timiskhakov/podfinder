@@ -1,0 +1,13 @@
+.podcast {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.podcast-image {
+    width: 30%;
+}
+
+.podcast-info {
+    padding: 0 1rem;
+}
