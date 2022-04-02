@@ -1,0 +1,3385 @@
+{
+    "feed":
+    {
+        "author":
+        {
+            "name":
+            {
+                "label": "iTunes Store"
+            },
+            "uri":
+            {
+                "label": "http://www.apple.com/itunes/"
+            }
+        },
+        "entry":
+        [
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "Human #6293839583"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id30028668"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "It’s been a year now. There are still a few hours before the exact anniversary of the last episode, but barring that I think it’s safe to assume it’s dead now.\nIt was a good run. Farewell, Internet.\n\nEdit: It’s now been two years. I admit I’d given up hope, but as the anniversary approached it flared up in me once again only to be snuffed out by the vacuum that is the lack of an episode. RIP, HI"
+                },
+                "id":
+                {
+                    "label": "8414391645"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Two Years"
+                },
+                "updated":
+                {
+                    "label": "2022-03-02T19:05:59-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "Scrubbaroony"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id390736607"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "If you love CPG Grey you will love this podcast. The relationship between Brady and Grey is priceless. Made evident by thousands of people eagerly listening to, well, two dude talking."
+                },
+                "id":
+                {
+                    "label": "8378849231"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "For shopping, driving, painting and more!"
+                },
+                "updated":
+                {
+                    "label": "2022-02-20T17:31:14-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "ScienceGuyLiquor"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id238130639"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "Re-listening to the show. A great familiar comfort during hard times. As much as I wish it was still going I’m grateful to have what I have."
+                },
+                "id":
+                {
+                    "label": "8240459150"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Not a 3 star show. Solid 5 stars for sure."
+                },
+                "updated":
+                {
+                    "label": "2022-01-14T11:54:02-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "jsmit5635"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id120778651"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "This has been one of my favorite podcasts to listen to and I was super upset when it ended. I would love to see this podcast continue!"
+                },
+                "id":
+                {
+                    "label": "8146793714"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Please come back!"
+                },
+                "updated":
+                {
+                    "label": "2021-12-19T05:46:57-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "St12vn"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id35944993"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "All caught up to #74 and have been working my way up from the beginning, too. On #13 now, excellent two dudes talking material. Be sure to check out the animations for the earlier episodes.\n\nEdit: I miss you two so much :/"
+                },
+                "id":
+                {
+                    "label": "8135236151"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Discovered earlier this year."
+                },
+                "updated":
+                {
+                    "label": "2021-12-15T23:50:09-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "ALDEN5"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id220420002"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "I’m hoping new episodes for new year!"
+                },
+                "id":
+                {
+                    "label": "8090842239"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Come back! Now."
+                },
+                "updated":
+                {
+                    "label": "2021-12-03T08:09:01-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "gayboy 111"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id929611625"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "Please I miss it"
+                },
+                "id":
+                {
+                    "label": "7996863219"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Please come back"
+                },
+                "updated":
+                {
+                    "label": "2021-11-06T18:13:53-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "Geekivision"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id566534783"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "I first listened to the show last August or September and I really liked it and binged the whole show.  After I finished I began to look forward to February 28 a year from the last upload, I was sad that it passed without any news.  Right now I’m re-listening to the show right before I serve a mission for The Church or Jesus Christ of Latter Day Saints, I’m kind of hoping to have a new episode when I come back in two years.  Regardless great show."
+                },
+                "id":
+                {
+                    "label": "7685440022"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Love the show and miss it"
+                },
+                "updated":
+                {
+                    "label": "2021-08-12T11:52:57-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "topopotomopolot"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id712893494"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "Followed it from the start and always liked it. I was sad when it went inactive. \n\nMeta: I was re-listening and when I got to ep 96 realized I never did review the show. So here it is.\n\nIt’s good. \n\nStill holding out hope they’ll come back."
+                },
+                "id":
+                {
+                    "label": "7633540077"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Missing this show."
+                },
+                "updated":
+                {
+                    "label": "2021-07-29T18:50:34-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "The pizza here"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id1228281883"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "The show, is good. Well edited, very fun."
+                },
+                "id":
+                {
+                    "label": "7614069641"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Very good show"
+                },
+                "updated":
+                {
+                    "label": "2021-07-24T14:31:52-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "caroline7573"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id1311217455"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "I’m partially here because of Brady’s vanity but mainly for this incredible podcast. I’m sad it ended but the time it was on was a lot of fun to listen to. I just want to still get hello internet hot stoppers though."
+                },
+                "id":
+                {
+                    "label": "7597811840"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Amazing podcast"
+                },
+                "updated":
+                {
+                    "label": "2021-07-20T05:54:36-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "Ret311572"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id1211747562"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "Hello Internet is my favorite podcast of all time. It is sad that it is over, but I am very grateful for the episodes that were made. No other podcast that I have ever listened to can compare."
+                },
+                "id":
+                {
+                    "label": "7559910082"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Brilliant"
+                },
+                "updated":
+                {
+                    "label": "2021-07-10T01:31:16-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "islamahmad"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id151763417"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "I love this podcast. I am listening to the backlog for the 4th time. I hope they will get back to it. 😓"
+                },
+                "id":
+                {
+                    "label": "7501067889"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Love it. Miss it"
+                },
+                "updated":
+                {
+                    "label": "2021-06-24T08:19:10-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "AelitaR"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id494382111"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "I shall patiently wait for them to come back. Are we reaching 10000 now:)?"
+                },
+                "id":
+                {
+                    "label": "7471519816"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Favorite Podcast"
+                },
+                "updated":
+                {
+                    "label": "2021-06-16T08:21:56-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "kizzmik the kobold"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id1164614328"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "While somber at times, I’ve let out many a chuckle. I’ve worked my way through the entire available catalog and am waiting eagerly for the end of the HI-atus."
+                },
+                "id":
+                {
+                    "label": "7426993829"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Hilarious!"
+                },
+                "updated":
+                {
+                    "label": "2021-06-04T14:42:44-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "yottalogical"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id509139672"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "The hosts’ personalities contrast in such a perfect way. The result is incredible!"
+                },
+                "id":
+                {
+                    "label": "7199383160"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Intelligent Humorous Conversation"
+                },
+                "updated":
+                {
+                    "label": "2021-04-08T12:24:02-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "Nightraider39"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id478595722"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "The show has some interesting topics. Brady and Grey speak in calm, professional voices. There is no screaming here. Also not really any politics if that concerns you. Perfect podcast if you are trying to sleep."
+                },
+                "id":
+                {
+                    "label": "7187528038"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Calm, intelligent conversation"
+                },
+                "updated":
+                {
+                    "label": "2021-04-05T11:20:52-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "RyanisDyslexic"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id654692565"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "Hello Internet is one of my favorite podcast I hope they make a new episodes soon"
+                },
+                "id":
+                {
+                    "label": "7113679541"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "HI is an Amazing Show"
+                },
+                "updated":
+                {
+                    "label": "2021-03-17T09:51:16-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "cool dude2845"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id87132006"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "Amazing podcast, it’s totally timeless. I love listening back even though there have not been new episodes in a year."
+                },
+                "id":
+                {
+                    "label": "7089716724"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Timeless Classic"
+                },
+                "updated":
+                {
+                    "label": "2021-03-10T23:09:14-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "J.H.42"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id7734133"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "I can’t believe it’s been a year. I love and miss this podcast. Please come back!!"
+                },
+                "id":
+                {
+                    "label": "7070024686"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Another plea for you to come back"
+                },
+                "updated":
+                {
+                    "label": "2021-03-05T17:48:05-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "woodenelephant"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id372963960"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "It has been one year since the HI-atus began. It was great while it lasted, so Grey and Brady, here's to you and this wonderful thing you've created"
+                },
+                "id":
+                {
+                    "label": "7051240602"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "One Year"
+                },
+                "updated":
+                {
+                    "label": "2021-02-28T19:53:36-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "theirishscion"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id3433286"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "I love this podcast so much! It might hold my universe together a little bit. Come back please!"
+                },
+                "id":
+                {
+                    "label": "7047533979"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Please come back!"
+                },
+                "updated":
+                {
+                    "label": "2021-02-27T21:18:26-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "AlphaMomx5"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id34565092"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "Brady said to"
+                },
+                "id":
+                {
+                    "label": "7045636594"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Your welcome Brady"
+                },
+                "updated":
+                {
+                    "label": "2021-02-27T09:14:24-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "obi-wan cornobi"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id1135912756"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "This podcast is amazing for  mornings and just being bored"
+                },
+                "id":
+                {
+                    "label": "7036659128"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Really a great show"
+                },
+                "updated":
+                {
+                    "label": "2021-02-25T04:21:03-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "drad 05"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id834462789"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "It’s great when I’m bored"
+                },
+                "id":
+                {
+                    "label": "7030590766"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Gold show"
+                },
+                "updated":
+                {
+                    "label": "2021-02-23T14:32:08-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "vestererer"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id398504383"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "Ive now listened to the back catalog again. I need Brady and Grey to come back. Please"
+                },
+                "id":
+                {
+                    "label": "7026044967"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Best podcast out there"
+                },
+                "updated":
+                {
+                    "label": "2021-02-22T09:52:52-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "tim fan 337"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id1021068220"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "I’m bored and can’t find a better podcast"
+                },
+                "id":
+                {
+                    "label": "6994462940"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Please come back"
+                },
+                "updated":
+                {
+                    "label": "2021-02-14T11:43:32-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "Gaaaaaaaaahhhhhhhhhhhhh"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id131635581"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "I knew 2020 was gunna be awful when they hadn’t made a new one since Feb. I’m not saying HI holds the fabric of reality together buuuut..pls come back before a meteor kills us all."
+                },
+                "id":
+                {
+                    "label": "6986075741"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "2020"
+                },
+                "updated":
+                {
+                    "label": "2021-02-12T09:34:48-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "StableGenius64"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id1041672666"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "Despite the desire for 10k reviews being mentioned years ago, it has still not been reached.\n\nIn all seriousness, great podcast - enough work is put into it that it sounds truly casual."
+                },
+                "id":
+                {
+                    "label": "6980021799"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Hello Internet should return from hiatus"
+                },
+                "updated":
+                {
+                    "label": "2021-02-10T20:55:58-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "I❤️DEXTER😘🥰"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id1150527230"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "Rlly good and funny"
+                },
+                "id":
+                {
+                    "label": "6889405521"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "4"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Wow"
+                },
+                "updated":
+                {
+                    "label": "2021-01-19T10:40:50-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "Biz Bissland"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id380094128"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "hey Brady, nice job! You sure do talk well. I hope you don’t lose that ability anytime soon ;)"
+                },
+                "id":
+                {
+                    "label": "6888512755"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "pretty cool"
+                },
+                "updated":
+                {
+                    "label": "2021-01-19T05:45:54-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "llamaprince"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id1204920965"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "I need you guys back!!"
+                },
+                "id":
+                {
+                    "label": "6886789933"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Come back to me"
+                },
+                "updated":
+                {
+                    "label": "2021-01-18T18:47:40-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "grasscaretaker69420"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id966195549"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "Please what is it you want I will pay come back"
+                },
+                "id":
+                {
+                    "label": "6875640037"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Come back"
+                },
+                "updated":
+                {
+                    "label": "2021-01-15T23:33:11-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "Normandy8x8"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id1181170964"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "This podcast got me into podcasts and I love it. From plane crashes to flags it is amazing. I hope they come back soon D:"
+                },
+                "id":
+                {
+                    "label": "6838266612"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Hello Internet = Best Podcast"
+                },
+                "updated":
+                {
+                    "label": "2021-01-06T08:48:48-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "Name_your_game"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id1237378525"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "Amazing podcasts\n\nPlz come back."
+                },
+                "id":
+                {
+                    "label": "6765274448"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Title"
+                },
+                "updated":
+                {
+                    "label": "2020-12-17T20:04:35-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "paintspotinfez"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id163963505"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "See title! Always a fun and engaging listen"
+                },
+                "id":
+                {
+                    "label": "6718750321"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "A great podcast with two great hosts!"
+                },
+                "updated":
+                {
+                    "label": "2020-12-04T21:10:41-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "DragCad"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id104408386"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "Had to go out of my way to give the 5 star rating to help Brady’s vanity! 😝  But seriously, this is like the third or fourth time going through all the episodes because it’s so entertaining. I really hope that the show returns soon."
+                },
+                "id":
+                {
+                    "label": "6696031499"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Just finished #96"
+                },
+                "updated":
+                {
+                    "label": "2020-11-28T10:08:49-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "kierancb701"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id567226758"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "Excellent from Los angeles"
+                },
+                "id":
+                {
+                    "label": "6632204682"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Title"
+                },
+                "updated":
+                {
+                    "label": "2020-11-10T23:16:12-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "lindellsy"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id117334532"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "Was a good show. Really disappointed with their handling of whatever is going on. Hope they’re well."
+                },
+                "id":
+                {
+                    "label": "6573980368"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "2"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "I don’t know"
+                },
+                "updated":
+                {
+                    "label": "2020-10-25T15:16:09-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "Will_3328"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id464756661"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "We’re getting desperate"
+                },
+                "id":
+                {
+                    "label": "6553183397"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Maybe if we get it to 10K reviews they’ll return to us"
+                },
+                "updated":
+                {
+                    "label": "2020-10-19T17:26:06-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "Pixelsplitter"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id450237126"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "Previous names are inadequate. I suppose I’m a Tim now."
+                },
+                "id":
+                {
+                    "label": "6505345462"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Legally changing my name"
+                },
+                "updated":
+                {
+                    "label": "2020-10-05T21:21:36-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "FourCHRISTsake"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id85448410"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "Abandoned during a time of need.. not angry just disappointed.. do better and stay safe!"
+                },
+                "id":
+                {
+                    "label": "6490273402"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "1"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Should have been 5 stars..."
+                },
+                "updated":
+                {
+                    "label": "2020-10-01T17:41:29-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "bajendnchieje"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id21176758"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "10k boys"
+                },
+                "id":
+                {
+                    "label": "6486940195"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Let’s gooooo"
+                },
+                "updated":
+                {
+                    "label": "2020-09-30T20:04:41-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "Bakomongai"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id250462973"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "Listened from the beginning, across continents and oceans. Be safe and looking forward to what’s next."
+                },
+                "id":
+                {
+                    "label": "6450905241"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Miss you guys"
+                },
+                "updated":
+                {
+                    "label": "2020-09-20T17:11:29-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "ddub556"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id398603917"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "Three quarters of the way there!"
+                },
+                "id":
+                {
+                    "label": "6420410580"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "10k"
+                },
+                "updated":
+                {
+                    "label": "2020-09-11T23:05:47-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "BigCountry2014"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id14976420"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "I’m slowly making my way through the backlog of episodes and am still hoping you can hit 10,000 reviews. Hopefully Brady and Gray can feel some pride when people look at their podcast numbers now!"
+                },
+                "id":
+                {
+                    "label": "6342426503"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "10,000 is still within reach"
+                },
+                "updated":
+                {
+                    "label": "2020-08-20T13:14:31-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "eeeedeeeed"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id1091084299"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "E"
+                },
+                "id":
+                {
+                    "label": "6305295729"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "Ye"
+                },
+                "updated":
+                {
+                    "label": "2020-08-11T00:39:07-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "🎇❤️🇺🇸🇺🇸❤️🎆"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id971785338"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "Goodbye internet: this podcast is inactive and it is highly unlikely there will be a new episode.\n\nListening to Brady and CGP talk about anything and everything makes long walks and drives fun again. I find myself making excuses to hop in my car so I can give them a listen."
+                },
+                "id":
+                {
+                    "label": "6302974662"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "The best podcast"
+                },
+                "updated":
+                {
+                    "label": "2020-08-10T09:11:42-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "p150"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id25242256"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "Just the best. Going through withdrawals without it during the pandemic!"
+                },
+                "id":
+                {
+                    "label": "6287194878"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "My Favorite “Two Dudes Talking”"
+                },
+                "updated":
+                {
+                    "label": "2020-08-06T07:46:09-07:00"
+                }
+            },
+            {
+                "author":
+                {
+                    "label": "",
+                    "name":
+                    {
+                        "label": "Daniel!777"
+                    },
+                    "uri":
+                    {
+                        "label": "https://itunes.apple.com/us/reviews/id1131405183"
+                    }
+                },
+                "content":
+                {
+                    "attributes":
+                    {
+                        "type": "text"
+                    },
+                    "label": "I love the show...I miss it tho."
+                },
+                "id":
+                {
+                    "label": "6265841230"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:rating":
+                {
+                    "label": "5"
+                },
+                "im:version":
+                {
+                    "label": ""
+                },
+                "im:voteCount":
+                {
+                    "label": "0"
+                },
+                "im:voteSum":
+                {
+                    "label": "0"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://itunes.apple.com/us/review?id=811377230&type=Podcast",
+                        "rel": "related"
+                    }
+                },
+                "title":
+                {
+                    "label": "5/5"
+                },
+                "updated":
+                {
+                    "label": "2020-07-31T21:42:03-07:00"
+                }
+            }
+        ],
+        "icon":
+        {
+            "label": "http://itunes.apple.com/favicon.ico"
+        },
+        "id":
+        {
+            "label": "https://mzstoreservices-int-st.itunes.apple.com/us/rss/customerreviews/id=811377230/json"
+        },
+        "link":
+        [
+            {
+                "attributes":
+                {
+                    "href": "https://music.apple.com/WebObjects/MZStore.woa/wa/viewGrouping?cc=us&id=1",
+                    "rel": "alternate",
+                    "type": "text/html"
+                }
+            },
+            {
+                "attributes":
+                {
+                    "href": "https://mzstoreservices-int-st.itunes.apple.com/us/rss/customerreviews/id=811377230/json",
+                    "rel": "self"
+                }
+            },
+            {
+                "attributes":
+                {
+                    "href": "https://itunes.apple.com/us/rss/customerreviews/page=1/id=811377230/sortby=mostrecent/xml?urlDesc=/customerreviews/id=811377230/json",
+                    "rel": "first"
+                }
+            },
+            {
+                "attributes":
+                {
+                    "href": "https://itunes.apple.com/us/rss/customerreviews/page=10/id=811377230/sortby=mostrecent/xml?urlDesc=/customerreviews/id=811377230/json",
+                    "rel": "last"
+                }
+            },
+            {
+                "attributes":
+                {
+                    "href": "https://itunes.apple.com/us/rss/customerreviews/page=1/id=811377230/sortby=mostrecent/xml?urlDesc=/customerreviews/id=811377230/json",
+                    "rel": "previous"
+                }
+            },
+            {
+                "attributes":
+                {
+                    "href": "https://itunes.apple.com/us/rss/customerreviews/page=2/id=811377230/sortby=mostrecent/xml?urlDesc=/customerreviews/id=811377230/json",
+                    "rel": "next"
+                }
+            }
+        ],
+        "rights":
+        {
+            "label": "Copyright 2008 Apple Inc."
+        },
+        "title":
+        {
+            "label": "iTunes Store: Customer Reviews"
+        },
+        "updated":
+        {
+            "label": "2022-04-02T00:22:38-07:00"
+        }
+    }
+}

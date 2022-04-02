@@ -75,8 +75,9 @@ func (a *app) handleRegion() http.HandlerFunc {
 		}
 
 		http.SetCookie(w, &http.Cookie{
-			Name:  "region",
-			Value: r.Form.Get("region"),
+			Name:     "region",
+			Value:    r.Form.Get("region"),
+			HttpOnly: true,
 		})
 
 		http.Redirect(w, r, "/", 301)

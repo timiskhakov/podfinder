@@ -1,0 +1,1069 @@
+{
+    "feed":
+    {
+        "author":
+        {
+            "name":
+            {
+                "label": "iTunes Store"
+            },
+            "uri":
+            {
+                "label": "http://www.apple.com/itunes/"
+            }
+        },
+        "entry":
+        [
+            {
+                "category":
+                {
+                    "attributes":
+                    {
+                        "im:id": "1488",
+                        "label": "True Crime",
+                        "scheme": "https://podcasts.apple.com/us/genre/podcasts-true-crime/id1488?uo=2",
+                        "term": "True Crime"
+                    }
+                },
+                "id":
+                {
+                    "attributes":
+                    {
+                        "im:id": "1612875889"
+                    },
+                    "label": "https://podcasts.apple.com/us/podcast/very-scary-people/id1612875889?uo=2"
+                },
+                "im:artist":
+                {
+                    "label": "HLN"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:image":
+                [
+                    {
+                        "attributes":
+                        {
+                            "height": "55"
+                        },
+                        "label": "https://is4-ssl.mzstatic.com/image/thumb/Podcasts116/v4/18/69/79/18697926-b149-c6e0-d33c-ce6fb250efec/mza_17914905586066761253.jpg/55x55bb.png"
+                    },
+                    {
+                        "attributes":
+                        {
+                            "height": "60"
+                        },
+                        "label": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/18/69/79/18697926-b149-c6e0-d33c-ce6fb250efec/mza_17914905586066761253.jpg/60x60bb.png"
+                    },
+                    {
+                        "attributes":
+                        {
+                            "height": "170"
+                        },
+                        "label": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts116/v4/18/69/79/18697926-b149-c6e0-d33c-ce6fb250efec/mza_17914905586066761253.jpg/170x170bb.png"
+                    }
+                ],
+                "im:name":
+                {
+                    "label": "Very Scary People"
+                },
+                "im:price":
+                {
+                    "attributes":
+                    {
+                        "amount": "0",
+                        "currency": "USD"
+                    },
+                    "label": "Get"
+                },
+                "im:releaseDate":
+                {
+                    "attributes":
+                    {
+                        "label": "April 1, 2022"
+                    },
+                    "label": "2022-04-01T01:00:00-07:00"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://podcasts.apple.com/us/podcast/very-scary-people/id1612875889?uo=2",
+                        "rel": "alternate",
+                        "type": "text/html"
+                    }
+                },
+                "rights":
+                {
+                    "label": "© 2022 CNN / HLN"
+                },
+                "summary":
+                {
+                    "label": "In 1974, a mass murder shook the sleepy waterfront town of Amityville, New York. One November night, police found the DeFeo family shot dead, face down in their beds. Only one survived: Ron DeFeo Jr., the eldest son with a troubled past. In this six-part series, host Donnie Wahlberg untangles the dark and complicated story of what happened that night, and unearths how these grisly murders sparked an infamous haunted tale.\n\n "
+                },
+                "title":
+                {
+                    "label": "Very Scary People - HLN"
+                }
+            },
+            {
+                "category":
+                {
+                    "attributes":
+                    {
+                        "im:id": "1488",
+                        "label": "True Crime",
+                        "scheme": "https://podcasts.apple.com/us/genre/podcasts-true-crime/id1488?uo=2",
+                        "term": "True Crime"
+                    }
+                },
+                "id":
+                {
+                    "attributes":
+                    {
+                        "im:id": "1464919521"
+                    },
+                    "label": "https://podcasts.apple.com/us/podcast/dateline-nbc/id1464919521?uo=2"
+                },
+                "im:artist":
+                {
+                    "attributes":
+                    {
+                        "href": "https://podcasts.apple.com/us/artist/nbc-news/119945391?uo=2"
+                    },
+                    "label": "NBC News"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:image":
+                [
+                    {
+                        "attributes":
+                        {
+                            "height": "55"
+                        },
+                        "label": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/8c/00/7a/8c007a42-e550-0214-d4cb-b59cd7edf194/mza_5305664083935674472.jpeg/55x55bb.png"
+                    },
+                    {
+                        "attributes":
+                        {
+                            "height": "60"
+                        },
+                        "label": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts115/v4/8c/00/7a/8c007a42-e550-0214-d4cb-b59cd7edf194/mza_5305664083935674472.jpeg/60x60bb.png"
+                    },
+                    {
+                        "attributes":
+                        {
+                            "height": "170"
+                        },
+                        "label": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts115/v4/8c/00/7a/8c007a42-e550-0214-d4cb-b59cd7edf194/mza_5305664083935674472.jpeg/170x170bb.png"
+                    }
+                ],
+                "im:name":
+                {
+                    "label": "Dateline NBC"
+                },
+                "im:price":
+                {
+                    "attributes":
+                    {
+                        "amount": "0",
+                        "currency": "USD"
+                    },
+                    "label": "Get"
+                },
+                "im:releaseDate":
+                {
+                    "attributes":
+                    {
+                        "label": "March 30, 2022"
+                    },
+                    "label": "2022-03-30T03:00:00-07:00"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://podcasts.apple.com/us/podcast/dateline-nbc/id1464919521?uo=2",
+                        "rel": "alternate",
+                        "type": "text/html"
+                    }
+                },
+                "rights":
+                {
+                    "label": "© 2019 NBC News"
+                },
+                "summary":
+                {
+                    "label": "Current and classic episodes, featuring compelling true-crime mysteries, powerful documentaries and in-depth investigations."
+                },
+                "title":
+                {
+                    "label": "Dateline NBC - NBC News"
+                }
+            },
+            {
+                "category":
+                {
+                    "attributes":
+                    {
+                        "im:id": "1526",
+                        "label": "Daily News",
+                        "scheme": "https://podcasts.apple.com/us/genre/podcasts-news-daily-news/id1526?uo=2",
+                        "term": "Daily News"
+                    }
+                },
+                "id":
+                {
+                    "attributes":
+                    {
+                        "im:id": "1200361736"
+                    },
+                    "label": "https://podcasts.apple.com/us/podcast/the-daily/id1200361736?uo=2"
+                },
+                "im:artist":
+                {
+                    "attributes":
+                    {
+                        "href": "https://podcasts.apple.com/us/artist/the-new-york-times/121664449?uo=2"
+                    },
+                    "label": "The New York Times"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:image":
+                [
+                    {
+                        "attributes":
+                        {
+                            "height": "55"
+                        },
+                        "label": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts115/v4/1c/ac/04/1cac0421-4483-ff09-4f80-19710d9feda4/mza_12421371692158516891.jpeg/55x55bb.png"
+                    },
+                    {
+                        "attributes":
+                        {
+                            "height": "60"
+                        },
+                        "label": "https://is4-ssl.mzstatic.com/image/thumb/Podcasts115/v4/1c/ac/04/1cac0421-4483-ff09-4f80-19710d9feda4/mza_12421371692158516891.jpeg/60x60bb.png"
+                    },
+                    {
+                        "attributes":
+                        {
+                            "height": "170"
+                        },
+                        "label": "https://is4-ssl.mzstatic.com/image/thumb/Podcasts115/v4/1c/ac/04/1cac0421-4483-ff09-4f80-19710d9feda4/mza_12421371692158516891.jpeg/170x170bb.png"
+                    }
+                ],
+                "im:name":
+                {
+                    "label": "The Daily"
+                },
+                "im:price":
+                {
+                    "attributes":
+                    {
+                        "amount": "0",
+                        "currency": "USD"
+                    },
+                    "label": "Get"
+                },
+                "im:releaseDate":
+                {
+                    "attributes":
+                    {
+                        "label": "March 31, 2022"
+                    },
+                    "label": "2022-03-31T02:45:00-07:00"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://podcasts.apple.com/us/podcast/the-daily/id1200361736?uo=2",
+                        "rel": "alternate",
+                        "type": "text/html"
+                    }
+                },
+                "rights":
+                {
+                    "label": "© 2020-2021 THE NEW YORK TIMES COMPANY; The New York Times encourages the use of RSS feeds for personal use in a news reader or as part of a non-commercial blog, subject to your agreement to our Terms of Service."
+                },
+                "summary":
+                {
+                    "label": "This is what the news should sound like. The biggest stories of our time, told by the best journalists in the world. Hosted by Michael Barbaro. Twenty minutes a day, five days a week, ready by 6 a.m."
+                },
+                "title":
+                {
+                    "label": "The Daily - The New York Times"
+                }
+            },
+            {
+                "category":
+                {
+                    "attributes":
+                    {
+                        "im:id": "1488",
+                        "label": "True Crime",
+                        "scheme": "https://podcasts.apple.com/us/genre/podcasts-true-crime/id1488?uo=2",
+                        "term": "True Crime"
+                    }
+                },
+                "id":
+                {
+                    "attributes":
+                    {
+                        "im:id": "1322200189"
+                    },
+                    "label": "https://podcasts.apple.com/us/podcast/crime-junkie/id1322200189?uo=2"
+                },
+                "im:artist":
+                {
+                    "attributes":
+                    {
+                        "href": "https://podcasts.apple.com/us/artist/audiochuck/1485045052?uo=2"
+                    },
+                    "label": "audiochuck"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:image":
+                [
+                    {
+                        "attributes":
+                        {
+                            "height": "55"
+                        },
+                        "label": "https://is4-ssl.mzstatic.com/image/thumb/Podcasts116/v4/c3/89/7b/c3897b84-4fb0-120b-59bf-71d31f7128c2/mza_5664025356979502788.jpg/55x55bb.png"
+                    },
+                    {
+                        "attributes":
+                        {
+                            "height": "60"
+                        },
+                        "label": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts116/v4/c3/89/7b/c3897b84-4fb0-120b-59bf-71d31f7128c2/mza_5664025356979502788.jpg/60x60bb.png"
+                    },
+                    {
+                        "attributes":
+                        {
+                            "height": "170"
+                        },
+                        "label": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts116/v4/c3/89/7b/c3897b84-4fb0-120b-59bf-71d31f7128c2/mza_5664025356979502788.jpg/170x170bb.png"
+                    }
+                ],
+                "im:name":
+                {
+                    "label": "Crime Junkie"
+                },
+                "im:price":
+                {
+                    "attributes":
+                    {
+                        "amount": "0",
+                        "currency": "USD"
+                    },
+                    "label": "Get"
+                },
+                "im:releaseDate":
+                {
+                    "attributes":
+                    {
+                        "label": "March 28, 2022"
+                    },
+                    "label": "2022-03-28T00:00:00-07:00"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://podcasts.apple.com/us/podcast/crime-junkie/id1322200189?uo=2",
+                        "rel": "alternate",
+                        "type": "text/html"
+                    }
+                },
+                "rights":
+                {
+                    "label": "© audiochuck"
+                },
+                "summary":
+                {
+                    "label": "If you can never get enough true crime... Congratulations, you’ve found your people."
+                },
+                "title":
+                {
+                    "label": "Crime Junkie - audiochuck"
+                }
+            },
+            {
+                "category":
+                {
+                    "attributes":
+                    {
+                        "im:id": "1488",
+                        "label": "True Crime",
+                        "scheme": "https://podcasts.apple.com/us/genre/podcasts-true-crime/id1488?uo=2",
+                        "term": "True Crime"
+                    }
+                },
+                "id":
+                {
+                    "attributes":
+                    {
+                        "im:id": "1479234915"
+                    },
+                    "label": "https://podcasts.apple.com/us/podcast/the-thing-about-pam/id1479234915?uo=2"
+                },
+                "im:artist":
+                {
+                    "attributes":
+                    {
+                        "href": "https://podcasts.apple.com/us/artist/nbc-news/119945391?uo=2"
+                    },
+                    "label": "NBC News"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:image":
+                [
+                    {
+                        "attributes":
+                        {
+                            "height": "55"
+                        },
+                        "label": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts115/v4/af/3a/60/af3a60d4-d356-4b11-c494-6ad8eb04c939/mza_3837267230771837319.jpeg/55x55bb.png"
+                    },
+                    {
+                        "attributes":
+                        {
+                            "height": "60"
+                        },
+                        "label": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts115/v4/af/3a/60/af3a60d4-d356-4b11-c494-6ad8eb04c939/mza_3837267230771837319.jpeg/60x60bb.png"
+                    },
+                    {
+                        "attributes":
+                        {
+                            "height": "170"
+                        },
+                        "label": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts115/v4/af/3a/60/af3a60d4-d356-4b11-c494-6ad8eb04c939/mza_3837267230771837319.jpeg/170x170bb.png"
+                    }
+                ],
+                "im:name":
+                {
+                    "label": "The Thing About Pam"
+                },
+                "im:price":
+                {
+                    "attributes":
+                    {
+                        "amount": "0",
+                        "currency": "USD"
+                    },
+                    "label": "Get"
+                },
+                "im:releaseDate":
+                {
+                    "attributes":
+                    {
+                        "label": "July 28, 2021"
+                    },
+                    "label": "2021-07-28T03:00:00-07:00"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://podcasts.apple.com/us/podcast/the-thing-about-pam/id1479234915?uo=2",
+                        "rel": "alternate",
+                        "type": "text/html"
+                    }
+                },
+                "rights":
+                {
+                    "label": "© 2019 NBC News"
+                },
+                "summary":
+                {
+                    "label": "Two days after Christmas, 2011, Russ Faria came home from game night to find his wife, Betsy, dead. He was soon charged and convicted of her murder. But Russ Faria insisted he did not kill his wife. Betsy’s brutal murder set off a chain of events that would leave one man dead, another man implicated, and expose a diabolical scheme. It would also see Dateline NBC—the true-crime original—become a part of the never-ending saga that proves the old adage: Truth is stranger than fiction. This original series from Keith Morrison and Dateline defies all expectations."
+                },
+                "title":
+                {
+                    "label": "The Thing About Pam - NBC News"
+                }
+            },
+            {
+                "category":
+                {
+                    "attributes":
+                    {
+                        "im:id": "1489",
+                        "label": "News",
+                        "scheme": "https://podcasts.apple.com/us/genre/podcasts-news/id1489?uo=2",
+                        "term": "News"
+                    }
+                },
+                "id":
+                {
+                    "attributes":
+                    {
+                        "im:id": "1047335260"
+                    },
+                    "label": "https://podcasts.apple.com/us/podcast/the-ben-shapiro-show/id1047335260?uo=2"
+                },
+                "im:artist":
+                {
+                    "attributes":
+                    {
+                        "href": "https://podcasts.apple.com/us/artist/the-daily-wire/1287316832?uo=2"
+                    },
+                    "label": "The Daily Wire"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:image":
+                [
+                    {
+                        "attributes":
+                        {
+                            "height": "55"
+                        },
+                        "label": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/f0/44/1f/f0441f40-8971-e3fa-e662-160b1685ddda/mza_14401724982159517756.jpg/55x55bb.png"
+                    },
+                    {
+                        "attributes":
+                        {
+                            "height": "60"
+                        },
+                        "label": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts116/v4/f0/44/1f/f0441f40-8971-e3fa-e662-160b1685ddda/mza_14401724982159517756.jpg/60x60bb.png"
+                    },
+                    {
+                        "attributes":
+                        {
+                            "height": "170"
+                        },
+                        "label": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts116/v4/f0/44/1f/f0441f40-8971-e3fa-e662-160b1685ddda/mza_14401724982159517756.jpg/170x170bb.png"
+                    }
+                ],
+                "im:name":
+                {
+                    "label": "The Ben Shapiro Show"
+                },
+                "im:price":
+                {
+                    "attributes":
+                    {
+                        "amount": "0",
+                        "currency": "USD"
+                    },
+                    "label": "Get"
+                },
+                "im:releaseDate":
+                {
+                    "attributes":
+                    {
+                        "label": "April 1, 2022"
+                    },
+                    "label": "2022-04-01T08:53:00-07:00"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://podcasts.apple.com/us/podcast/the-ben-shapiro-show/id1047335260?uo=2",
+                        "rel": "alternate",
+                        "type": "text/html"
+                    }
+                },
+                "rights":
+                {
+                    "label": "© All rights reserved"
+                },
+                "summary":
+                {
+                    "label": "Tired of the lies? Tired of the spin? Are you ready to hear the hard-hitting truth in comprehensive, conservative, principled fashion? The Ben Shapiro Show brings you all the news you need to know in the most fast moving daily program in America. Ben brutally breaks down the culture and never gives an inch! Monday thru Friday."
+                },
+                "title":
+                {
+                    "label": "The Ben Shapiro Show - The Daily Wire"
+                }
+            },
+            {
+                "category":
+                {
+                    "attributes":
+                    {
+                        "im:id": "1526",
+                        "label": "Daily News",
+                        "scheme": "https://podcasts.apple.com/us/genre/podcasts-news-daily-news/id1526?uo=2",
+                        "term": "Daily News"
+                    }
+                },
+                "id":
+                {
+                    "attributes":
+                    {
+                        "im:id": "1222114325"
+                    },
+                    "label": "https://podcasts.apple.com/us/podcast/up-first/id1222114325?uo=2"
+                },
+                "im:artist":
+                {
+                    "attributes":
+                    {
+                        "href": "https://podcasts.apple.com/us/artist/npr/125443881?uo=2"
+                    },
+                    "label": "NPR"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:image":
+                [
+                    {
+                        "attributes":
+                        {
+                            "height": "55"
+                        },
+                        "label": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts126/v4/fd/28/c1/fd28c180-3494-3704-4606-15572dd15e52/mza_12702636719783571919.png/55x55bb.png"
+                    },
+                    {
+                        "attributes":
+                        {
+                            "height": "60"
+                        },
+                        "label": "https://is4-ssl.mzstatic.com/image/thumb/Podcasts126/v4/fd/28/c1/fd28c180-3494-3704-4606-15572dd15e52/mza_12702636719783571919.png/60x60bb.png"
+                    },
+                    {
+                        "attributes":
+                        {
+                            "height": "170"
+                        },
+                        "label": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/fd/28/c1/fd28c180-3494-3704-4606-15572dd15e52/mza_12702636719783571919.png/170x170bb.png"
+                    }
+                ],
+                "im:name":
+                {
+                    "label": "Up First"
+                },
+                "im:price":
+                {
+                    "attributes":
+                    {
+                        "amount": "0",
+                        "currency": "USD"
+                    },
+                    "label": "Get"
+                },
+                "im:releaseDate":
+                {
+                    "attributes":
+                    {
+                        "label": "April 1, 2022"
+                    },
+                    "label": "2022-04-01T02:51:00-07:00"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://podcasts.apple.com/us/podcast/up-first/id1222114325?uo=2",
+                        "rel": "alternate",
+                        "type": "text/html"
+                    }
+                },
+                "rights":
+                {
+                    "label": "© Copyright 2015-2021 NPR - For Personal Use Only"
+                },
+                "summary":
+                {
+                    "label": "NPR's Up First is the news you need to start your day. The three biggest stories of the day, with reporting and analysis from NPR News — in 10 minutes. Available weekdays by 6 a.m. ET, with hosts Leila Fadel, Steve Inskeep, Rachel Martin and A Martinez. Also available on Saturdays by 8 a.m. ET, with Ayesha Rascoe and Scott Simon. On Sundays, hear a longer exploration behind the headlines with Rachel Martin, available by 8 a.m. ET. Subscribe and listen, then support your local NPR station at donate.npr.org."
+                },
+                "title":
+                {
+                    "label": "Up First - NPR"
+                }
+            },
+            {
+                "category":
+                {
+                    "attributes":
+                    {
+                        "im:id": "1439",
+                        "label": "Christianity",
+                        "scheme": "https://podcasts.apple.com/us/genre/podcasts-christianity/id1439?uo=2",
+                        "term": "Christianity"
+                    }
+                },
+                "id":
+                {
+                    "attributes":
+                    {
+                        "im:id": "1539568321"
+                    },
+                    "label": "https://podcasts.apple.com/us/podcast/the-bible-in-a-year-with-fr-mike-schmitz/id1539568321?uo=2"
+                },
+                "im:artist":
+                {
+                    "attributes":
+                    {
+                        "href": "https://podcasts.apple.com/us/artist/ascension-the-leader-in-catholic-faith-formation/1468392145?uo=2"
+                    },
+                    "label": "Ascension Catholic Faith Formation"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:image":
+                [
+                    {
+                        "attributes":
+                        {
+                            "height": "55"
+                        },
+                        "label": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/9a/f3/b1/9af3b11f-8e17-24d6-c88f-4885a4d1fd18/mza_7492109584616749800.jpg/55x55bb.png"
+                    },
+                    {
+                        "attributes":
+                        {
+                            "height": "60"
+                        },
+                        "label": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts126/v4/9a/f3/b1/9af3b11f-8e17-24d6-c88f-4885a4d1fd18/mza_7492109584616749800.jpg/60x60bb.png"
+                    },
+                    {
+                        "attributes":
+                        {
+                            "height": "170"
+                        },
+                        "label": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts126/v4/9a/f3/b1/9af3b11f-8e17-24d6-c88f-4885a4d1fd18/mza_7492109584616749800.jpg/170x170bb.png"
+                    }
+                ],
+                "im:name":
+                {
+                    "label": "The Bible in a Year (with Fr. Mike Schmitz)"
+                },
+                "im:price":
+                {
+                    "attributes":
+                    {
+                        "amount": "0",
+                        "currency": "USD"
+                    },
+                    "label": "Get"
+                },
+                "im:releaseDate":
+                {
+                    "attributes":
+                    {
+                        "label": "March 31, 2022"
+                    },
+                    "label": "2022-03-31T21:00:00-07:00"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://podcasts.apple.com/us/podcast/the-bible-in-a-year-with-fr-mike-schmitz/id1539568321?uo=2",
+                        "rel": "alternate",
+                        "type": "text/html"
+                    }
+                },
+                "rights":
+                {
+                    "label": "© 2022 Ascension Catholic Faith Formation"
+                },
+                "summary":
+                {
+                    "label": "In The Bible in a Year podcast, Fr. Mike Schmitz walks you through the entire Bible in 365 episodes, providing commentary, reflection, and prayer along the way.\nUnlike any other Bible podcast, Ascension’s Bible in a Year podcast follows a reading plan inspired by The Great Adventure Bible Timeline, a ground-breaking approach to understanding salvation history developed by renowned Catholic Bible scholar Jeff Cavins. For each period in the timeline, Jeff will join Fr. Mike for a special episode that will help you understand the context of each reading.\nWith this podcast, you won’t just read the Bible in a year … you’ll finally understand how all the pieces of the Bible fit together to tell an amazing story that continues in your life today!\nListen and…\nRead the ENTIRE Bible\nFeel more confident about your understanding of Scripture\nExperience the transformative power of God’s Word in your daily life\nStart seeing the world through the lens of Scripture\nEach 20-25 minute episode includes:\nTwo to three scripture readings\nA reflection from Fr. Mike Schmitz\nA guided prayer to help you hear God’s voice in his Word\nThe Bible contains adult themes that may not be suitable for children - parental discretion is advised."
+                },
+                "title":
+                {
+                    "label": "The Bible in a Year (with Fr. Mike Schmitz) - Ascension Catholic Faith Formation"
+                }
+            },
+            {
+                "category":
+                {
+                    "attributes":
+                    {
+                        "im:id": "1324",
+                        "label": "Society & Culture",
+                        "scheme": "https://podcasts.apple.com/us/genre/podcasts-society-culture/id1324?uo=2",
+                        "term": "Society & Culture"
+                    }
+                },
+                "id":
+                {
+                    "attributes":
+                    {
+                        "im:id": "278981407"
+                    },
+                    "label": "https://podcasts.apple.com/us/podcast/stuff-you-should-know/id278981407?uo=2"
+                },
+                "im:artist":
+                {
+                    "attributes":
+                    {
+                        "href": "https://podcasts.apple.com/us/artist/iheartradio/284341002?uo=2"
+                    },
+                    "label": "iHeartPodcasts"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:image":
+                [
+                    {
+                        "attributes":
+                        {
+                            "height": "55"
+                        },
+                        "label": "https://is4-ssl.mzstatic.com/image/thumb/Podcasts112/v4/63/23/09/63230959-e594-c48e-715e-491997eac009/mza_1068286170855981376.jpg/55x55bb.png"
+                    },
+                    {
+                        "attributes":
+                        {
+                            "height": "60"
+                        },
+                        "label": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/63/23/09/63230959-e594-c48e-715e-491997eac009/mza_1068286170855981376.jpg/60x60bb.png"
+                    },
+                    {
+                        "attributes":
+                        {
+                            "height": "170"
+                        },
+                        "label": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts112/v4/63/23/09/63230959-e594-c48e-715e-491997eac009/mza_1068286170855981376.jpg/170x170bb.png"
+                    }
+                ],
+                "im:name":
+                {
+                    "label": "Stuff You Should Know"
+                },
+                "im:price":
+                {
+                    "attributes":
+                    {
+                        "amount": "0",
+                        "currency": "USD"
+                    },
+                    "label": "Get"
+                },
+                "im:releaseDate":
+                {
+                    "attributes":
+                    {
+                        "label": "March 31, 2022"
+                    },
+                    "label": "2022-03-31T00:01:00-07:00"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://podcasts.apple.com/us/podcast/stuff-you-should-know/id278981407?uo=2",
+                        "rel": "alternate",
+                        "type": "text/html"
+                    }
+                },
+                "rights":
+                {
+                    "label": "© 2022 iHeartPodcasts"
+                },
+                "summary":
+                {
+                    "label": "If you've ever wanted to know about champagne, satanism, the Stonewall Uprising, chaos theory, LSD, El Nino, true crime and Rosa Parks, then look no further. Josh and Chuck have you covered."
+                },
+                "title":
+                {
+                    "label": "Stuff You Should Know - iHeartPodcasts"
+                }
+            },
+            {
+                "category":
+                {
+                    "attributes":
+                    {
+                        "im:id": "1488",
+                        "label": "True Crime",
+                        "scheme": "https://podcasts.apple.com/us/genre/podcasts-true-crime/id1488?uo=2",
+                        "term": "True Crime"
+                    }
+                },
+                "id":
+                {
+                    "attributes":
+                    {
+                        "im:id": "1608813794"
+                    },
+                    "label": "https://podcasts.apple.com/us/podcast/mrballen-podcast-strange-dark-mysterious-stories/id1608813794?uo=2"
+                },
+                "im:artist":
+                {
+                    "label": "MrBallen"
+                },
+                "im:contentType":
+                {
+                    "attributes":
+                    {
+                        "label": "Podcast",
+                        "term": "Podcast"
+                    }
+                },
+                "im:image":
+                [
+                    {
+                        "attributes":
+                        {
+                            "height": "55"
+                        },
+                        "label": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts126/v4/9f/76/09/9f760909-6680-a2c7-2555-3c3d4f61ffbd/mza_2721901663862356505.jpg/55x55bb.png"
+                    },
+                    {
+                        "attributes":
+                        {
+                            "height": "60"
+                        },
+                        "label": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts126/v4/9f/76/09/9f760909-6680-a2c7-2555-3c3d4f61ffbd/mza_2721901663862356505.jpg/60x60bb.png"
+                    },
+                    {
+                        "attributes":
+                        {
+                            "height": "170"
+                        },
+                        "label": "https://is4-ssl.mzstatic.com/image/thumb/Podcasts126/v4/9f/76/09/9f760909-6680-a2c7-2555-3c3d4f61ffbd/mza_2721901663862356505.jpg/170x170bb.png"
+                    }
+                ],
+                "im:name":
+                {
+                    "label": "MrBallen Podcast: Strange, Dark & Mysterious Stories"
+                },
+                "im:price":
+                {
+                    "attributes":
+                    {
+                        "amount": "0",
+                        "currency": "USD"
+                    },
+                    "label": "Get"
+                },
+                "im:releaseDate":
+                {
+                    "attributes":
+                    {
+                        "label": "March 28, 2022"
+                    },
+                    "label": "2022-03-28T05:32:00-07:00"
+                },
+                "link":
+                {
+                    "attributes":
+                    {
+                        "href": "https://podcasts.apple.com/us/podcast/mrballen-podcast-strange-dark-mysterious-stories/id1608813794?uo=2",
+                        "rel": "alternate",
+                        "type": "text/html"
+                    }
+                },
+                "rights":
+                {
+                    "label": "© MrBallen"
+                },
+                "summary":
+                {
+                    "label": "The Strange, Dark and Mysterious delivered in podcast format."
+                },
+                "title":
+                {
+                    "label": "MrBallen Podcast: Strange, Dark & Mysterious Stories - MrBallen"
+                }
+            }
+        ],
+        "icon":
+        {
+            "label": "http://itunes.apple.com/favicon.ico"
+        },
+        "id":
+        {
+            "label": "https://mzstoreservices-int-st.itunes.apple.com/us/rss/toppodcasts/limit=10/json"
+        },
+        "link":
+        [
+            {
+                "attributes":
+                {
+                    "href": "https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewTop?cc=us&id=1&popId=3",
+                    "rel": "alternate",
+                    "type": "text/html"
+                }
+            },
+            {
+                "attributes":
+                {
+                    "href": "https://mzstoreservices-int-st.itunes.apple.com/us/rss/toppodcasts/limit=10/json",
+                    "rel": "self"
+                }
+            }
+        ],
+        "rights":
+        {
+            "label": "Copyright 2008 Apple Inc."
+        },
+        "title":
+        {
+            "label": "iTunes Store: Top Podcasts"
+        },
+        "updated":
+        {
+            "label": "2022-04-01T23:31:58-07:00"
+        }
+    }
+}

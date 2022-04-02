@@ -1,0 +1,48 @@
+{
+    "resultCount": 1,
+    "results":
+    [
+        {
+            "artistName": "CGP Grey & Brady Haran",
+            "artworkUrl100": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts6/v4/19/33/fe/1933fe85-cd86-2191-8187-d725ca7359bf/mza_8038397602264410223.png/100x100bb.jpg",
+            "artworkUrl30": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts6/v4/19/33/fe/1933fe85-cd86-2191-8187-d725ca7359bf/mza_8038397602264410223.png/30x30bb.jpg",
+            "artworkUrl60": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts6/v4/19/33/fe/1933fe85-cd86-2191-8187-d725ca7359bf/mza_8038397602264410223.png/60x60bb.jpg",
+            "artworkUrl600": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts6/v4/19/33/fe/1933fe85-cd86-2191-8187-d725ca7359bf/mza_8038397602264410223.png/600x600bb.jpg",
+            "collectionCensoredName": "Hello Internet",
+            "collectionExplicitness": "cleaned",
+            "collectionHdPrice": 0,
+            "collectionId": 811377230,
+            "collectionName": "Hello Internet",
+            "collectionPrice": 0.00,
+            "collectionViewUrl": "https://podcasts.apple.com/us/podcast/hello-internet/id811377230?uo=4",
+            "contentAdvisoryRating": "Clean",
+            "country": "USA",
+            "currency": "USD",
+            "feedUrl": "http://www.hellointernet.fm/podcast?format=rss",
+            "genreIds":
+            [
+                "1304",
+                "26"
+            ],
+            "genres":
+            [
+                "Education",
+                "Podcasts"
+            ],
+            "kind": "podcast",
+            "primaryGenreName": "Education",
+            "releaseDate": "2020-02-28T10:13:00Z",
+            "trackCensoredName": "Hello Internet",
+            "trackCount": 100,
+            "trackExplicitness": "cleaned",
+            "trackHdPrice": 0,
+            "trackHdRentalPrice": 0,
+            "trackId": 811377230,
+            "trackName": "Hello Internet",
+            "trackPrice": 0.00,
+            "trackRentalPrice": 0,
+            "trackViewUrl": "https://podcasts.apple.com/us/podcast/hello-internet/id811377230?uo=4",
+            "wrapperType": "track"
+        }
+    ]
+}

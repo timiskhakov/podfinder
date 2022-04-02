@@ -27,12 +27,12 @@ type Store struct {
 	hc  Getter
 }
 
-func NewStore(url string, hc Getter) *Store {
+func NewStore(url string, g Getter) *Store {
 	if url == "" {
 		url = defaultUrl
 	}
 
-	return &Store{url, hc}
+	return &Store{url, g}
 }
 
 type Podcast struct {

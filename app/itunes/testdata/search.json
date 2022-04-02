@@ -1,0 +1,220 @@
+{
+    "resultCount": 5,
+    "results":
+    [
+        {
+            "artistName": "CGP Grey & Brady Haran",
+            "artworkUrl100": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts6/v4/19/33/fe/1933fe85-cd86-2191-8187-d725ca7359bf/mza_8038397602264410223.png/100x100bb.jpg",
+            "artworkUrl30": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts6/v4/19/33/fe/1933fe85-cd86-2191-8187-d725ca7359bf/mza_8038397602264410223.png/30x30bb.jpg",
+            "artworkUrl60": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts6/v4/19/33/fe/1933fe85-cd86-2191-8187-d725ca7359bf/mza_8038397602264410223.png/60x60bb.jpg",
+            "artworkUrl600": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts6/v4/19/33/fe/1933fe85-cd86-2191-8187-d725ca7359bf/mza_8038397602264410223.png/600x600bb.jpg",
+            "collectionCensoredName": "Hello Internet",
+            "collectionExplicitness": "cleaned",
+            "collectionHdPrice": 0,
+            "collectionId": 811377230,
+            "collectionName": "Hello Internet",
+            "collectionPrice": 0.00,
+            "collectionViewUrl": "https://podcasts.apple.com/us/podcast/hello-internet/id811377230?uo=4",
+            "contentAdvisoryRating": "Clean",
+            "country": "USA",
+            "currency": "USD",
+            "feedUrl": "http://www.hellointernet.fm/podcast?format=rss",
+            "genreIds":
+            [
+                "1304",
+                "26"
+            ],
+            "genres":
+            [
+                "Education",
+                "Podcasts"
+            ],
+            "kind": "podcast",
+            "primaryGenreName": "Education",
+            "releaseDate": "2020-02-28T10:13:00Z",
+            "trackCensoredName": "Hello Internet",
+            "trackCount": 100,
+            "trackExplicitness": "cleaned",
+            "trackHdPrice": 0,
+            "trackHdRentalPrice": 0,
+            "trackId": 811377230,
+            "trackName": "Hello Internet",
+            "trackPrice": 0.00,
+            "trackRentalPrice": 0,
+            "trackViewUrl": "https://podcasts.apple.com/us/podcast/hello-internet/id811377230?uo=4",
+            "wrapperType": "track"
+        },
+        {
+            "artistName": "ilovemushroomsandfrogs99 hello",
+            "artworkUrl100": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts125/v4/34/96/2c/34962c24-171c-b10f-0901-10e003eb38f3/mza_6441518779381591735.jpg/100x100bb.jpg",
+            "artworkUrl30": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts125/v4/34/96/2c/34962c24-171c-b10f-0901-10e003eb38f3/mza_6441518779381591735.jpg/30x30bb.jpg",
+            "artworkUrl60": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts125/v4/34/96/2c/34962c24-171c-b10f-0901-10e003eb38f3/mza_6441518779381591735.jpg/60x60bb.jpg",
+            "artworkUrl600": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts125/v4/34/96/2c/34962c24-171c-b10f-0901-10e003eb38f3/mza_6441518779381591735.jpg/600x600bb.jpg",
+            "collectionCensoredName": "The Future Of Computers On The Internet Now",
+            "collectionExplicitness": "cleaned",
+            "collectionHdPrice": 0,
+            "collectionId": 1567190167,
+            "collectionName": "The Future Of Computers On The Internet Now",
+            "collectionPrice": 0.00,
+            "collectionViewUrl": "https://podcasts.apple.com/us/podcast/the-future-of-computers-on-the-internet-now/id1567190167?uo=4",
+            "contentAdvisoryRating": "Clean",
+            "country": "USA",
+            "currency": "USD",
+            "feedUrl": "https://anchor.fm/s/5ad12dd8/podcast/rss",
+            "genreIds":
+            [
+                "1303",
+                "26"
+            ],
+            "genres":
+            [
+                "Comedy",
+                "Podcasts"
+            ],
+            "kind": "podcast",
+            "primaryGenreName": "Comedy",
+            "releaseDate": "2021-05-12T15:30:00Z",
+            "trackCensoredName": "The Future Of Computers On The Internet Now",
+            "trackCount": 7,
+            "trackExplicitness": "cleaned",
+            "trackHdPrice": 0,
+            "trackHdRentalPrice": 0,
+            "trackId": 1567190167,
+            "trackName": "The Future Of Computers On The Internet Now",
+            "trackPrice": 0.00,
+            "trackRentalPrice": 0,
+            "trackViewUrl": "https://podcasts.apple.com/us/podcast/the-future-of-computers-on-the-internet-now/id1567190167?uo=4",
+            "wrapperType": "track"
+        },
+        {
+            "artistId": 284175323,
+            "artistName": "RTHK ON INTERNET",
+            "artistViewUrl": "https://podcasts.apple.com/us/artist/rthk/284175323?uo=4",
+            "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts/v4/a5/41/cb/a541cbb0-e3dc-2a10-01d8-ada6ca0fa2b5/mza_8511421633046414504.jpg/100x100bb.jpg",
+            "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts/v4/a5/41/cb/a541cbb0-e3dc-2a10-01d8-ada6ca0fa2b5/mza_8511421633046414504.jpg/30x30bb.jpg",
+            "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts/v4/a5/41/cb/a541cbb0-e3dc-2a10-01d8-ada6ca0fa2b5/mza_8511421633046414504.jpg/60x60bb.jpg",
+            "artworkUrl600": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts/v4/a5/41/cb/a541cbb0-e3dc-2a10-01d8-ada6ca0fa2b5/mza_8511421633046414504.jpg/600x600bb.jpg",
+            "collectionCensoredName": "香港電台：Hello Teen Power",
+            "collectionExplicitness": "notExplicit",
+            "collectionHdPrice": 0,
+            "collectionId": 151622312,
+            "collectionName": "香港電台：Hello Teen Power",
+            "collectionPrice": 0.00,
+            "collectionViewUrl": "https://podcasts.apple.com/us/podcast/%E9%A6%99%E6%B8%AF%E9%9B%BB%E5%8F%B0-hello-teen-power/id151622312?uo=4",
+            "country": "USA",
+            "currency": "USD",
+            "feedUrl": "http://podcast.rthk.org.hk/podcast/teenpower_i.xml",
+            "genreIds":
+            [
+                "1303",
+                "26"
+            ],
+            "genres":
+            [
+                "Comedy",
+                "Podcasts"
+            ],
+            "kind": "podcast",
+            "primaryGenreName": "Comedy",
+            "releaseDate": "2017-06-22T00:15:00Z",
+            "trackCensoredName": "香港電台：Hello Teen Power",
+            "trackCount": 302,
+            "trackExplicitness": "notExplicit",
+            "trackHdPrice": 0,
+            "trackHdRentalPrice": 0,
+            "trackId": 151622312,
+            "trackName": "香港電台：Hello Teen Power",
+            "trackPrice": 0.00,
+            "trackRentalPrice": 0,
+            "trackViewUrl": "https://podcasts.apple.com/us/podcast/%E9%A6%99%E6%B8%AF%E9%9B%BB%E5%8F%B0-hello-teen-power/id151622312?uo=4",
+            "wrapperType": "track"
+        },
+        {
+            "artistId": 284175323,
+            "artistName": "RTHK ON INTERNET",
+            "artistViewUrl": "https://podcasts.apple.com/us/artist/rthk/284175323?uo=4",
+            "artworkUrl100": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts113/v4/fe/bd/b9/febdb977-4818-38f5-020d-9412dfae5be0/ps.irgnqlbw.jpg/100x100bb.jpg",
+            "artworkUrl30": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts113/v4/fe/bd/b9/febdb977-4818-38f5-020d-9412dfae5be0/ps.irgnqlbw.jpg/30x30bb.jpg",
+            "artworkUrl60": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts113/v4/fe/bd/b9/febdb977-4818-38f5-020d-9412dfae5be0/ps.irgnqlbw.jpg/60x60bb.jpg",
+            "artworkUrl600": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts113/v4/fe/bd/b9/febdb977-4818-38f5-020d-9412dfae5be0/ps.irgnqlbw.jpg/600x600bb.jpg",
+            "collectionCensoredName": "香港電台︰World Hello Day",
+            "collectionExplicitness": "notExplicit",
+            "collectionHdPrice": 0,
+            "collectionId": 209227182,
+            "collectionName": "香港電台︰World Hello Day",
+            "collectionPrice": 0.00,
+            "collectionViewUrl": "https://podcasts.apple.com/us/podcast/%E9%A6%99%E6%B8%AF%E9%9B%BB%E5%8F%B0-world-hello-day/id209227182?uo=4",
+            "country": "USA",
+            "currency": "USD",
+            "feedUrl": "http://podcast.rthk.org.hk/podcast/worldhelloday_i.xml",
+            "genreIds":
+            [
+                "1320",
+                "26",
+                "1324"
+            ],
+            "genres":
+            [
+                "Places & Travel",
+                "Podcasts",
+                "Society & Culture"
+            ],
+            "kind": "podcast",
+            "primaryGenreName": "Places & Travel",
+            "releaseDate": "2007-05-14T17:01:00Z",
+            "trackCensoredName": "香港電台︰World Hello Day",
+            "trackCount": 26,
+            "trackExplicitness": "notExplicit",
+            "trackHdPrice": 0,
+            "trackHdRentalPrice": 0,
+            "trackId": 209227182,
+            "trackName": "香港電台︰World Hello Day",
+            "trackPrice": 0.00,
+            "trackRentalPrice": 0,
+            "trackViewUrl": "https://podcasts.apple.com/us/podcast/%E9%A6%99%E6%B8%AF%E9%9B%BB%E5%8F%B0-world-hello-day/id209227182?uo=4",
+            "wrapperType": "track"
+        },
+        {
+            "artistName": "Tom & Nick",
+            "artworkUrl100": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts/v4/92/b0/20/92b0204e-3c5a-2758-caa1-35e6d6ee12d5/mza_4334620030295539363.jpg/100x100bb.jpg",
+            "artworkUrl30": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts/v4/92/b0/20/92b0204e-3c5a-2758-caa1-35e6d6ee12d5/mza_4334620030295539363.jpg/30x30bb.jpg",
+            "artworkUrl60": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts/v4/92/b0/20/92b0204e-3c5a-2758-caa1-35e6d6ee12d5/mza_4334620030295539363.jpg/60x60bb.jpg",
+            "artworkUrl600": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts/v4/92/b0/20/92b0204e-3c5a-2758-caa1-35e6d6ee12d5/mza_4334620030295539363.jpg/600x600bb.jpg",
+            "collectionCensoredName": "Hello, We're from the Internet",
+            "collectionExplicitness": "explicit",
+            "collectionHdPrice": 0,
+            "collectionId": 519611048,
+            "collectionName": "Hello, We're from the Internet",
+            "collectionPrice": 0.00,
+            "collectionViewUrl": "https://podcasts.apple.com/us/podcast/hello-were-from-the-internet/id519611048?uo=4",
+            "contentAdvisoryRating": "Explicit",
+            "country": "USA",
+            "currency": "USD",
+            "feedUrl": "https://feed.podbean.com/hwfti/feed.xml",
+            "genreIds":
+            [
+                "1309",
+                "26"
+            ],
+            "genres":
+            [
+                "TV & Film",
+                "Podcasts"
+            ],
+            "kind": "podcast",
+            "primaryGenreName": "TV & Film",
+            "releaseDate": "2012-04-16T05:46:00Z",
+            "trackCensoredName": "Hello, We're from the Internet",
+            "trackCount": 1,
+            "trackExplicitness": "explicit",
+            "trackHdPrice": 0,
+            "trackHdRentalPrice": 0,
+            "trackId": 519611048,
+            "trackName": "Hello, We're from the Internet",
+            "trackPrice": 0.00,
+            "trackRentalPrice": 0,
+            "trackViewUrl": "https://podcasts.apple.com/us/podcast/hello-were-from-the-internet/id519611048?uo=4",
+            "wrapperType": "track"
+        }
+    ]
+}
