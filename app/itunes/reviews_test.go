@@ -22,3 +22,20 @@ func (s *StoreSuite) TestReviews() {
 	s.NoError(err)
 	s.Equal(50, len(reviews))
 }
+
+func (s *StoreSuite) TestRating() {
+	cases := []struct {
+		s string
+		v int
+	}{
+		{"5", 5},
+		{"invalid", 0},
+	}
+
+	for _, c := range cases {
+		c := c
+		s.Run(c.s, func() {
+			s.Equal(c.v, len(rating(c.s)))
+		})
+	}
+}

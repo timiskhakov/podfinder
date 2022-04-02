@@ -1,61 +1,61 @@
 {{define "content"}}
 
-<div class="ui container">
-    <div class="podcast">
-        <div class="podcast-image">
-            <img class="ui fluid image" src="{{.Data.Podcast.Image}}" />
-        </div>
-        <div class="podcast-info">
-            <h1 class="ui header">
-                {{.Data.Podcast.Name}}
-                <div class="sub header">{{.Data.Podcast.Artist}}</div>
-            </h1>
+<div class="podcast">
+    <div class="podcast-image">
+        <img class="ui fluid image" src="{{.Data.Podcast.Image}}" />
+    </div>
+    <div class="podcast-info">
+        <h1 class="ui header">
+            {{.Data.Podcast.Name}}
+            <div class="sub header">{{.Data.Podcast.Artist}}</div>
+        </h1>
+        <div class="ui horizontal list">
             {{range .Data.Podcast.Genres}}
             <div class="ui label">
                 {{.}}
             </div>
             {{end}}
-            <div class="ui list">
-                <div class="item">
-                    <i class="apple icon"></i>
-                    <div class="content">
-                        <a target="_blank" href="{{.Data.Podcast.Url}}">Apple Podcasts</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <i class="rss icon"></i>
-                    <div class="content">
-                        <a target="_blank" href="{{.Data.Podcast.FeedUrl}}">Feed</a>
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
-    <h3 class="ui dividing header">
-        Recent reviews
-    </h3>
-    <div class="reviews">
-        {{ range .Data.Reviews }}
-        <div class="ui comments">
-            <div class="comment">
+        <div class="ui list">
+            <div class="item">
+                <i class="apple icon"></i>
                 <div class="content">
-                    <span class="author">{{.Author}}</span>
-                    <div class="metadata">
-                        <div class="date">{{.Date.Format "2 Jan 2006"}}</div>
-                        <div class="rating">
-                            {{range .Rating}}
-                            <i class='star icon'></i>
-                            {{end}}
-                        </div>
-                    </div>
-                    <div class="text">
-                        {{.Content}}
-                    </div>
+                    <a target="_blank" href="{{.Data.Podcast.Url}}">Apple Podcasts</a>
+                </div>
+            </div>
+            <div class="item">
+                <i class="rss icon"></i>
+                <div class="content">
+                    <a target="_blank" href="{{.Data.Podcast.FeedUrl}}">Feed</a>
                 </div>
             </div>
         </div>
-        {{ end }}
     </div>
+</div>
+<h3 class="ui dividing header">
+    Recent reviews
+</h3>
+<div class="reviews">
+    {{ range .Data.Reviews }}
+    <div class="ui comments">
+        <div class="comment">
+            <div class="content">
+                <span class="author">{{.Author}}</span>
+                <div class="metadata">
+                    <div class="date">{{.Date.Format "2 Jan 2006"}}</div>
+                    <div class="rating">
+                        {{range .Rating}}
+                        <i class='star icon'></i>
+                        {{end}}
+                    </div>
+                </div>
+                <div class="text">
+                    {{.Content}}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ end }}
 </div>
 
 {{end}}

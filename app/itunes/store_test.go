@@ -32,3 +32,20 @@ func (s *StoreSuite) TestNewStore() {
 	s.NotNil(store)
 	s.Equal(defaultUrl, store.url)
 }
+
+func (s *StoreSuite) TestIsSupportedRegion() {
+	cases := []struct {
+		region      string
+		isSupported bool
+	}{
+		{"us", true},
+		{"uk", false},
+	}
+
+	for _, c := range cases {
+		c := c
+		s.Run(c.region, func() {
+			s.Equal(c.isSupported, isSupportedRegion(c.region))
+		})
+	}
+}

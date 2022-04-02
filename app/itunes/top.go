@@ -9,7 +9,7 @@ import (
 )
 
 func (s *Store) Top(region string) ([]*Podcast, error) {
-	if region == "" {
+	if region == "" || !isSupportedRegion(region) {
 		region = defaultRegion
 	}
 

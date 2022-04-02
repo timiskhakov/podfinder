@@ -7,6 +7,7 @@ const (
 	defaultRegion = "us"
 )
 
+// Regions lists ISO country codes, see: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
 var Regions = []Region{
 	{
 		Value: "fi",
@@ -15,6 +16,10 @@ var Regions = []Region{
 	{
 		Value: "ru",
 		Name:  "Russia",
+	},
+	{
+		Value: "gb",
+		Name:  "United Kingdom",
 	},
 	{
 		Value: "us",
@@ -33,6 +38,15 @@ func NewStore(url string, g Getter) *Store {
 	}
 
 	return &Store{url, g}
+}
+
+func isSupportedRegion(v string) bool {
+	for _, r := range Regions {
+		if r.Value == v {
+			return true
+		}
+	}
+	return false
 }
 
 type Podcast struct {
