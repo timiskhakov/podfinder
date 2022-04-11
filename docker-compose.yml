@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  podfinder:
+    build: .
+    image: timiskhakov/podfinder:latest
+    container_name: "podfinder"
+    hostname: "podfinder"
+    restart: always
+
+    ports:
+      - "3000:3000"
