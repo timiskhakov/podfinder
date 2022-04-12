@@ -42,21 +42,20 @@ func (a *app) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 func (a *app) handleHome() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		rgn := region(r)
-		podcasts, err := a.str.Top(rgn)
+		podcasts, err := a.str.Top(region(r))
 		if err != nil {
-			render(w, nil, err, "./templates/base.html", "./templates/error.html")
+			render(w, r, nil, err, "./templates/base.html", "./templates/error.html")
 			return
 		}
 
-		render(w, createResponse(rgn, podcasts), nil, "./templates/base.html", "./templates/home.html")
+		render(w, r, podcasts, nil, "./templates/base.html", "./templates/home.html")
 	}
 }
 
 func (a *app) handleRegion() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		if err := r.ParseForm(); err != nil {
-			render(w, nil, err, "./templates/base.html", "./templates/error.html")
+			render(w, r, nil, err, "./templates/base.html", "./templates/error.html")
 			return
 		}
 
@@ -66,25 +65,24 @@ func (a *app) handleRegion() http.HandlerFunc {
 			HttpOnly: true,
 		})
 
-		http.Redirect(w, r, "/", 301)
+		http.Redirect(w, r, r.RequestURI, 301)
 	}
 }
 
 func (a *app) handleSearch() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		rgn := region(r)
 		if err := r.ParseForm(); err != nil {
-			render(w, nil, err, "./templates/base.html", "./templates/error.html")
+			render(w, r, nil, err, "./templates/base.html", "./templates/error.html")
 			return
 		}
 
-		podcasts, err := a.str.Search(rgn, r.Form.Get("query"))
+		podcasts, err := a.str.Search(region(r), r.Form.Get("query"))
 		if err != nil {
-			render(w, nil, err, "./templates/base.html", "./templates/error.html")
+			render(w, r, nil, err, "./templates/base.html", "./templates/error.html")
 			return
 		}
 
-		render(w, createResponse(rgn, podcasts), nil, "./templates/base.html", "./templates/results.html")
+		render(w, r, podcasts, nil, "./templates/base.html", "./templates/results.html")
 	}
 }
 
@@ -96,27 +94,25 @@ func (a *app) handlePodcast() http.HandlerFunc {
 
 	return func(w http.ResponseWriter, r *http.Request) {
 		id := mux.Vars(r)["id"]
-		rgn := region(r)
 		podcast, err := a.str.Lookup(id)
 		if err != nil {
-			render(w, createResponse(rgn, nil), nil, "./templates/base.html", "./templates/404.html")
+			render(w, r, nil, nil, "./templates/base.html", "./templates/404.html")
 			return
 		}
 
-		reviews, err := a.str.Reviews(id, rgn)
+		reviews, err := a.str.Reviews(id, region(r))
 		if err != nil {
 			log.Println(err.Error())
 			reviews = []*itunes.Review{}
 		}
 
-		render(w, createResponse(rgn, podcastAndReviews{podcast, reviews}), nil, "./templates/base.html", "./templates/podcast.html")
+		render(w, r, podcastAndReviews{podcast, reviews}, nil, "./templates/base.html", "./templates/podcast.html")
 	}
 }
 
-func render(w http.ResponseWriter, data any, err error, templates ...string) {
+func render(w http.ResponseWriter, r *http.Request, data any, err error, templates ...string) {
 	if err != nil {
 		log.Println(err.Error())
-		return
 	}
 
 	ts, err := template.ParseFiles(templates...)
@@ -126,29 +122,21 @@ func render(w http.ResponseWriter, data any, err error, templates ...string) {
 		return
 	}
 
-	if err = ts.Execute(w, data); err != nil {
+	if err = ts.Execute(w, &response{
+		Region:  region(r),
+		Regions: itunes.Regions,
+		Data:    data,
+	}); err != nil {
 		log.Println(err.Error())
 		http.Error(w, "Internal Server Error", 500)
 		return
 	}
 }
 
-func createResponse(rgn string, v interface{}) *response {
-	if rgn == "" {
-		rgn = "us"
-	}
-
-	return &response{
-		Region:  rgn,
-		Regions: itunes.Regions,
-		Data:    v,
-	}
-}
-
 func region(r *http.Request) string {
 	cookie, err := r.Cookie("region")
-	if err != nil {
-		return ""
+	if err != nil || cookie.Value == "" {
+		return "us"
 	}
 
 	return cookie.Value
