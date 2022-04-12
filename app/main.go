@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/timiskhakov/podfinder/app/itunes"
 	"golang.org/x/sync/errgroup"
+	"log"
 	"net/http"
 	"os"
 	"os/signal"
@@ -29,6 +30,7 @@ func run() error {
 	errs, ctx := errgroup.WithContext(context.Background())
 
 	errs.Go(func() error {
+		log.Println("starting server")
 		if err := srv.ListenAndServe(); err != nil {
 			return err
 		}
@@ -40,6 +42,7 @@ func run() error {
 		signal.Notify(sigs, os.Interrupt, syscall.SIGTERM)
 		<-sigs
 
+		log.Println("shutting down server")
 		tc, cancel := context.WithTimeout(ctx, 30*time.Second)
 		defer cancel()
 		return srv.Shutdown(tc)

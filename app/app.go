@@ -45,27 +45,18 @@ func (a *app) handleHome() http.HandlerFunc {
 		rgn := region(r)
 		podcasts, err := a.str.Top(rgn)
 		if err != nil {
-			internalServerError(err, w)
+			render(w, nil, err, "./templates/base.html", "./templates/error.html")
 			return
 		}
 
-		ts, err := template.ParseFiles([]string{"./templates/base.html", "./templates/home.html"}...)
-		if err != nil {
-			internalServerError(err, w)
-			return
-		}
-
-		if err = ts.Execute(w, data(rgn, podcasts)); err != nil {
-			internalServerError(err, w)
-			return
-		}
+		render(w, createResponse(rgn, podcasts), nil, "./templates/base.html", "./templates/home.html")
 	}
 }
 
 func (a *app) handleRegion() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		if err := r.ParseForm(); err != nil {
-			internalServerError(err, w)
+			render(w, nil, err, "./templates/base.html", "./templates/error.html")
 			return
 		}
 
@@ -83,26 +74,17 @@ func (a *app) handleSearch() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		rgn := region(r)
 		if err := r.ParseForm(); err != nil {
-			internalServerError(err, w)
+			render(w, nil, err, "./templates/base.html", "./templates/error.html")
 			return
 		}
 
 		podcasts, err := a.str.Search(rgn, r.Form.Get("query"))
 		if err != nil {
-			internalServerError(err, w)
+			render(w, nil, err, "./templates/base.html", "./templates/error.html")
 			return
 		}
 
-		ts, err := template.ParseFiles([]string{"./templates/base.html", "./templates/results.html"}...)
-		if err != nil {
-			internalServerError(err, w)
-			return
-		}
-
-		if err = ts.Execute(w, data(rgn, podcasts)); err != nil {
-			internalServerError(err, w)
-			return
-		}
+		render(w, createResponse(rgn, podcasts), nil, "./templates/base.html", "./templates/results.html")
 	}
 }
 
@@ -117,42 +99,45 @@ func (a *app) handlePodcast() http.HandlerFunc {
 		rgn := region(r)
 		podcast, err := a.str.Lookup(id)
 		if err != nil {
-			ts, err := template.ParseFiles([]string{"./templates/base.html", "./templates/404.html"}...)
-			if err != nil {
-				internalServerError(err, w)
-				return
-			}
-			if err = ts.Execute(w, data(rgn, nil)); err != nil {
-				internalServerError(err, w)
-				return
-			}
+			render(w, createResponse(rgn, nil), nil, "./templates/base.html", "./templates/404.html")
 			return
 		}
 
 		reviews, err := a.str.Reviews(id, rgn)
 		if err != nil {
 			log.Println(err.Error())
+			reviews = []*itunes.Review{}
 		}
 
-		ts, err := template.ParseFiles([]string{"./templates/base.html", "./templates/podcast.html"}...)
-		if err != nil {
-			internalServerError(err, w)
-			return
-		}
-
-		if err = ts.Execute(w, data(rgn, podcastAndReviews{podcast, reviews})); err != nil {
-			internalServerError(err, w)
-			return
-		}
+		render(w, createResponse(rgn, podcastAndReviews{podcast, reviews}), nil, "./templates/base.html", "./templates/podcast.html")
 	}
 }
 
-func internalServerError(err error, w http.ResponseWriter) {
-	log.Println(err.Error())
-	http.Error(w, "Internal Server Error", 500)
+func render(w http.ResponseWriter, data any, err error, templates ...string) {
+	if err != nil {
+		log.Println(err.Error())
+		return
+	}
+
+	ts, err := template.ParseFiles(templates...)
+	if err != nil {
+		log.Println(err.Error())
+		http.Error(w, "Internal Server Error", 500)
+		return
+	}
+
+	if err = ts.Execute(w, data); err != nil {
+		log.Println(err.Error())
+		http.Error(w, "Internal Server Error", 500)
+		return
+	}
 }
 
-func data(rgn string, v interface{}) *response {
+func createResponse(rgn string, v interface{}) *response {
+	if rgn == "" {
+		rgn = "us"
+	}
+
 	return &response{
 		Region:  rgn,
 		Regions: itunes.Regions,

@@ -8,8 +8,9 @@ import (
 )
 
 func (s *StoreSuite) TestReviews() {
-	fh, err := os.Open("testdata/reviews.json")
+	fh, err := os.Open("../testdata/reviews.json")
 	s.NoError(err)
+	defer fh.Close()
 	g := mock.NewMockGetter(s.ctrl)
 	g.EXPECT().Get(gomock.Any()).Return(&http.Response{
 		StatusCode: http.StatusOK,

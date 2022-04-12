@@ -15,8 +15,8 @@
       <div class="item">
         <a href="/">podfinder</a>
       </div>
-      <div class="right menu">
-        <form class="ui form" name="regions" action="/" method="post">
+      <div class="ui right dropdown item">
+        <form class="ui form regions" name="regions" action="/" method="post">
           <div class="field">
             <select name="region" onchange="this.form.submit()">
               {{range .Regions}}

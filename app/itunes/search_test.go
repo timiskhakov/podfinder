@@ -8,8 +8,9 @@ import (
 )
 
 func (s *StoreSuite) TestSearch() {
-	fh, err := os.Open("testdata/search.json")
+	fh, err := os.Open("../testdata/search.json")
 	s.NoError(err)
+	defer fh.Close()
 	g := mock.NewMockGetter(s.ctrl)
 	g.EXPECT().Get(gomock.Any()).Return(&http.Response{
 		StatusCode: http.StatusOK,
@@ -18,7 +19,7 @@ func (s *StoreSuite) TestSearch() {
 	store := Store{"", g}
 
 	podcasts, err := store.Search("", "Hello Internet")
-	
+
 	s.NoError(err)
 	s.Equal(5, len(podcasts))
 	s.Equal(&Podcast{
