@@ -30,4 +30,4 @@ jobs:
           echo ${GITHUB_TOKEN} | docker login ghcr.io -u ${USERNAME} --password-stdin
           docker buildx build --push \
             --platform linux/amd64 \
-            -t ${USERNAME}/podfinder:${ref}
+            -t ${USERNAME}/podfinder:${ref} .
