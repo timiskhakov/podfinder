@@ -1,4 +1,4 @@
-name: test
+name: build
 
 on:
   push:
@@ -21,13 +21,13 @@ jobs:
       - name: Build and deploy master image to ghcr.io
         if: ${{ github.ref == 'refs/heads/master' }}
         env:
-          GITHUB_PACKAGE_TOKEN: ${{ secrets.PKG_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.actor }}
           GITHUB_REF: ${{ github.ref }}
         run: |
           ref="$(echo ${GITHUB_REF} | cut -d'/' -f3)"
           echo "GITHUB_REF=${GITHUB_REF}, GIT_BRANCH=${ref}"
-          echo ${GITHUB_PACKAGE_TOKEN} | docker login ghcr.io -u ${USERNAME} --password-stdin
+          echo ${GITHUB_TOKEN} | docker login ghcr.io -u ${USERNAME} --password-stdin
           docker buildx build --push \
             --platform linux/amd64 \
             -t ${USERNAME}/podfinder:${ref}
