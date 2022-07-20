@@ -33,13 +33,14 @@ func (s *Store) Lookup(id string) (*PodcastDetail, error) {
 	}
 
 	return &PodcastDetail{
-		Id:      strconv.Itoa(r.Results[0].Id),
-		Artist:  r.Results[0].Artist,
-		Name:    r.Results[0].Name,
-		Image:   r.Results[0].Image,
-		Url:     r.Results[0].Url,
-		FeedUrl: r.Results[0].FeedUrl,
-		Genres:  r.Results[0].Genres,
+		Id:           strconv.Itoa(r.Results[0].Id),
+		Artist:       r.Results[0].Artist,
+		Name:         r.Results[0].Name,
+		Image:        r.Results[0].Image,
+		EpisodeCount: r.Results[0].EpisodeCount,
+		Url:          r.Results[0].Url,
+		FeedUrl:      r.Results[0].FeedUrl,
+		Genres:       r.Results[0].Genres,
 	}, nil
 }
 
@@ -48,11 +49,12 @@ type lookupResponse struct {
 }
 
 type lookupResult struct {
-	Id      int      `json:"collectionId"`
-	Artist  string   `json:"artistName"`
-	Name    string   `json:"collectionName"`
-	Image   string   `json:"artworkUrl600"`
-	Url     string   `json:"collectionViewUrl"`
-	FeedUrl string   `json:"feedUrl"`
-	Genres  []string `json:"genres"`
+	Id           int      `json:"collectionId"`
+	Artist       string   `json:"artistName"`
+	Name         string   `json:"collectionName"`
+	Image        string   `json:"artworkUrl600"`
+	EpisodeCount int      `json:"trackCount"`
+	Url          string   `json:"collectionViewUrl"`
+	FeedUrl      string   `json:"feedUrl"`
+	Genres       []string `json:"genres"`
 }

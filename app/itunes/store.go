@@ -57,13 +57,14 @@ type Podcast struct {
 }
 
 type PodcastDetail struct {
-	Id      string
-	Artist  string
-	Name    string
-	Image   string
-	Url     string
-	FeedUrl string
-	Genres  []string
+	Id           string
+	Artist       string
+	Name         string
+	Image        string
+	EpisodeCount int
+	Url          string
+	FeedUrl      string
+	Genres       []string
 }
 
 type Review struct {

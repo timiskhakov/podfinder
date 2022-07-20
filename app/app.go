@@ -99,6 +99,8 @@ func (a *app) handlePodcast() http.HandlerFunc {
 
 	return func(w http.ResponseWriter, r *http.Request) {
 		id := mux.Vars(r)["id"]
+
+		// TODO(timiskhakov): Obtain podcast and reviews asynchronously?
 		podcast, err := a.str.Lookup(id)
 		if err != nil {
 			render(w, r, nil, nil, "./templates/base.html", "./templates/404.html")
