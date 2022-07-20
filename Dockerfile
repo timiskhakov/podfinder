@@ -15,7 +15,7 @@ RUN go mod download
 RUN cd app && go test ./...
 RUN cd app && go build -o podfinder
 
-# Stage 2: App
+# Stage 2: Run
 
 FROM alpine:3.15
 
