@@ -70,19 +70,24 @@ func (a *app) handleRegion() http.HandlerFunc {
 }
 
 func (a *app) handleSearch() http.HandlerFunc {
+	type queryAndPodcasts struct {
+		Query    string
+		Podcasts []*itunes.Podcast
+	}
 	return func(w http.ResponseWriter, r *http.Request) {
 		if err := r.ParseForm(); err != nil {
 			render(w, r, nil, err, "./templates/base.html", "./templates/error.html")
 			return
 		}
 
-		podcasts, err := a.str.Search(region(r), r.Form.Get("query"))
+		query := r.Form.Get("query")
+		podcasts, err := a.str.Search(region(r), query)
 		if err != nil {
 			render(w, r, nil, err, "./templates/base.html", "./templates/error.html")
 			return
 		}
 
-		render(w, r, podcasts, nil, "./templates/base.html", "./templates/results.html")
+		render(w, r, queryAndPodcasts{query, podcasts}, nil, "./templates/base.html", "./templates/results.html")
 	}
 }
 

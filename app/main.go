@@ -13,6 +13,8 @@ import (
 	"time"
 )
 
+const port = 3000
+
 func main() {
 	if err := run(); err != nil {
 		fmt.Fprintln(os.Stderr, err)
@@ -23,14 +25,14 @@ func main() {
 func run() error {
 	store := itunes.NewStore("", &http.Client{})
 	srv := http.Server{
-		Addr:    ":3000",
+		Addr:    fmt.Sprintf(":%d", port),
 		Handler: NewApp(store),
 	}
 
 	errs, ctx := errgroup.WithContext(context.Background())
 
 	errs.Go(func() error {
-		log.Println("starting server")
+		log.Printf("starting server: %d\n", port)
 		if err := srv.ListenAndServe(); err != nil {
 			return err
 		}
@@ -42,8 +44,8 @@ func run() error {
 		signal.Notify(sigs, os.Interrupt, syscall.SIGTERM)
 		<-sigs
 
-		log.Println("shutting down server")
-		tc, cancel := context.WithTimeout(ctx, 30*time.Second)
+		log.Printf("shutting down server: %d\n", port)
+		tc, cancel := context.WithTimeout(ctx, 5*time.Second)
 		defer cancel()
 		return srv.Shutdown(tc)
 	})
