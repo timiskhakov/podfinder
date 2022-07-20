@@ -4,7 +4,7 @@ import "time"
 
 const (
 	defaultUrl    = "https://itunes.apple.com"
-	defaultRegion = "us"
+	DefaultRegion = "us"
 )
 
 // Regions lists ISO country codes, see: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2

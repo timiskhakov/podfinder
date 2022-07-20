@@ -10,8 +10,8 @@ import (
 )
 
 func (s *Store) Search(region, query string) ([]*Podcast, error) {
-	if region == "" {
-		region = defaultRegion
+	if region == "" || !isSupportedRegion(region) {
+		region = DefaultRegion
 	}
 
 	resp, err := s.hc.Get(fmt.Sprintf("%s/search?media=podcast&entity=podcast&country=%s&term=%s", s.url, region, url.QueryEscape(query)))

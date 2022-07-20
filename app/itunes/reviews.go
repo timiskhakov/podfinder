@@ -10,6 +10,10 @@ import (
 )
 
 func (s *Store) Reviews(id, region string) ([]*Review, error) {
+	if region == "" || !isSupportedRegion(region) {
+		region = DefaultRegion
+	}
+
 	resp, err := s.hc.Get(fmt.Sprintf("%s/%s/rss/customerreviews/id=%s/json", s.url, region, id))
 	if err != nil {
 		return nil, err

@@ -10,7 +10,7 @@ import (
 
 func (s *Store) Top(region string) ([]*Podcast, error) {
 	if region == "" || !isSupportedRegion(region) {
-		region = defaultRegion
+		region = DefaultRegion
 	}
 
 	resp, err := s.hc.Get(fmt.Sprintf("%s/%s/rss/toppodcasts/limit=10/json", s.url, region))

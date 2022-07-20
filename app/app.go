@@ -141,7 +141,7 @@ func render(w http.ResponseWriter, r *http.Request, data any, err error, templat
 func region(r *http.Request) string {
 	cookie, err := r.Cookie("region")
 	if err != nil || cookie.Value == "" {
-		return "us"
+		return itunes.DefaultRegion
 	}
 
 	return cookie.Value
