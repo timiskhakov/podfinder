@@ -25,18 +25,19 @@ func main() {
 func run() error {
 	store := itunes.NewStore("", &http.Client{})
 	srv := http.Server{
-		Addr:    fmt.Sprintf(":%d", port),
-		Handler: NewApp(store),
+		Addr:              fmt.Sprintf(":%d", port),
+		Handler:           NewApp(store),
+		IdleTimeout:       30 * time.Second,
+		ReadTimeout:       1 * time.Second,
+		ReadHeaderTimeout: 2 * time.Second,
+		WriteTimeout:      5 * time.Second,
 	}
 
 	errs, ctx := errgroup.WithContext(context.Background())
 
 	errs.Go(func() error {
 		log.Printf("starting server: %d\n", port)
-		if err := srv.ListenAndServe(); err != nil {
-			return err
-		}
-		return nil
+		return srv.ListenAndServe()
 	})
 
 	errs.Go(func() error {
@@ -47,6 +48,7 @@ func run() error {
 		log.Printf("shutting down server: %d\n", port)
 		tc, cancel := context.WithTimeout(ctx, 5*time.Second)
 		defer cancel()
+
 		return srv.Shutdown(tc)
 	})
 
