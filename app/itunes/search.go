@@ -18,7 +18,7 @@ func (s *Store) Search(region, query string) ([]*Podcast, error) {
 	if err != nil {
 		return nil, err
 	}
-	defer resp.Body.Close()
+	defer func() { _ = resp.Body.Close() }()
 
 	if resp.StatusCode != http.StatusOK {
 		bytes, err := io.ReadAll(resp.Body)
