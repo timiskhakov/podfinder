@@ -10,7 +10,7 @@ import (
 )
 
 func (s *Store) Search(region, query string) ([]*Podcast, error) {
-	if region == "" || !isSupportedRegion(region) {
+	if !isSupportedRegion(region) {
 		region = DefaultRegion
 	}
 

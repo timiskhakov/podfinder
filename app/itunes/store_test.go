@@ -38,6 +38,7 @@ func (s *StoreSuite) TestIsSupportedRegion() {
 		region      string
 		isSupported bool
 	}{
+		{"", false},
 		{"us", true},
 		{"uk", false},
 	}

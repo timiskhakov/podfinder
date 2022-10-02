@@ -10,7 +10,7 @@ import (
 )
 
 func (s *Store) Reviews(id, region string) ([]*Review, error) {
-	if region == "" || !isSupportedRegion(region) {
+	if !isSupportedRegion(region) {
 		region = DefaultRegion
 	}
 

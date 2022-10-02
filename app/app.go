@@ -8,20 +8,20 @@ import (
 	"net/http"
 )
 
-type app struct {
+type App struct {
 	router http.Handler
-	str    store
+	store  Store
 }
 
-type store interface {
+type Store interface {
 	Top(region string) ([]*itunes.Podcast, error)
 	Search(region, query string) ([]*itunes.Podcast, error)
 	Lookup(id string) (*itunes.PodcastDetail, error)
 	Reviews(id, region string) ([]*itunes.Review, error)
 }
 
-func NewApp(str store) *app {
-	a := &app{str: str}
+func NewApp(store Store) *App {
+	a := &App{store: store}
 
 	r := mux.NewRouter()
 	r.PathPrefix("/www/").Handler(http.StripPrefix("/www/", http.FileServer(http.Dir("./www/"))))
@@ -36,13 +36,13 @@ func NewApp(str store) *app {
 	return a
 }
 
-func (a *app) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+func (a *App) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	a.router.ServeHTTP(w, r)
 }
 
-func (a *app) handleHome() http.HandlerFunc {
+func (a *App) handleHome() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		podcasts, err := a.str.Top(region(r))
+		podcasts, err := a.store.Top(region(r))
 		if err != nil {
 			render(w, r, nil, err, "./templates/base.html", "./templates/error.html")
 			return
@@ -52,7 +52,7 @@ func (a *app) handleHome() http.HandlerFunc {
 	}
 }
 
-func (a *app) handleRegion() http.HandlerFunc {
+func (a *App) handleRegion() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		if err := r.ParseForm(); err != nil {
 			render(w, r, nil, err, "./templates/base.html", "./templates/error.html")
@@ -69,7 +69,7 @@ func (a *app) handleRegion() http.HandlerFunc {
 	}
 }
 
-func (a *app) handleSearch() http.HandlerFunc {
+func (a *App) handleSearch() http.HandlerFunc {
 	type queryAndPodcasts struct {
 		Query    string
 		Podcasts []*itunes.Podcast
@@ -81,7 +81,7 @@ func (a *app) handleSearch() http.HandlerFunc {
 		}
 
 		query := r.Form.Get("query")
-		podcasts, err := a.str.Search(region(r), query)
+		podcasts, err := a.store.Search(region(r), query)
 		if err != nil {
 			render(w, r, nil, err, "./templates/base.html", "./templates/error.html")
 			return
@@ -91,7 +91,7 @@ func (a *app) handleSearch() http.HandlerFunc {
 	}
 }
 
-func (a *app) handlePodcast() http.HandlerFunc {
+func (a *App) handlePodcast() http.HandlerFunc {
 	type podcastAndReviews struct {
 		Podcast *itunes.PodcastDetail
 		Reviews []*itunes.Review
@@ -101,13 +101,13 @@ func (a *app) handlePodcast() http.HandlerFunc {
 		id := mux.Vars(r)["id"]
 
 		// TODO(timiskhakov): Obtain podcast and reviews asynchronously?
-		podcast, err := a.str.Lookup(id)
+		podcast, err := a.store.Lookup(id)
 		if err != nil {
 			render(w, r, nil, nil, "./templates/base.html", "./templates/404.html")
 			return
 		}
 
-		reviews, err := a.str.Reviews(id, region(r))
+		reviews, err := a.store.Reviews(id, region(r))
 		if err != nil {
 			log.Println(err.Error())
 			reviews = []*itunes.Review{}
@@ -152,5 +152,5 @@ func region(r *http.Request) string {
 type response struct {
 	Region  string
 	Regions []itunes.Region
-	Data    interface{}
+	Data    any
 }
