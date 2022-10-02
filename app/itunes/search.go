@@ -2,6 +2,7 @@ package itunes
 
 import (
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io"
 	"net/http"
@@ -25,7 +26,7 @@ func (s *Store) Search(region, query string) ([]*Podcast, error) {
 		if err != nil {
 			return nil, err
 		}
-		return nil, fmt.Errorf("itunes search api error: %s", string(bytes))
+		return nil, errors.New(fmt.Sprintf("itunes search api error: %s", string(bytes)))
 	}
 
 	r := searchResponse{}

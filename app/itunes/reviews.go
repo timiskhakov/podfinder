@@ -2,6 +2,7 @@ package itunes
 
 import (
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io"
 	"net/http"
@@ -25,7 +26,7 @@ func (s *Store) Reviews(id, region string) ([]*Review, error) {
 		if err != nil {
 			return nil, err
 		}
-		return nil, fmt.Errorf("itunes reviews api error: %s", string(bytes))
+		return nil, errors.New(fmt.Sprintf("itunes reviews api error: %s", string(bytes)))
 	}
 
 	r := reviewsResponse{}

@@ -45,14 +45,15 @@
     <div class="ui comments">
         <div class="comment">
             <div class="content">
-                <span class="author">{{.Author}}</span>
+                <span class="author">{{.Title}}</span>
                 <div class="metadata">
-                    <div class="date">{{.Date.Format "2 Jan 2006"}}</div>
                     <div class="rating">
+                        {{.Author}}&nbsp
                         {{range .Rating}}
                         <i class='star icon'></i>
                         {{end}}
                     </div>
+                    <div class="date">{{.Date.Format "2 Jan 2006"}}</div>
                 </div>
                 <div class="text">
                     {{.Content}}
