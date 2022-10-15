@@ -4,6 +4,6 @@ package itunes
 
 import "net/http"
 
-type Getter interface {
+type HttpClient interface {
 	Get(url string) (resp *http.Response, err error)
 }

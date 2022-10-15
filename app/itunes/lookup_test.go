@@ -11,7 +11,7 @@ func (s *StoreSuite) TestLookup() {
 	fh, err := os.Open("../testdata/lookup.json")
 	s.NoError(err)
 	defer fh.Close()
-	g := mock.NewMockGetter(s.ctrl)
+	g := mock.NewMockHttpClient(s.ctrl)
 	g.EXPECT().Get(gomock.Any()).Return(&http.Response{
 		StatusCode: http.StatusOK,
 		Body:       fh,

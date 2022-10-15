@@ -25,7 +25,7 @@ func (s *StoreSuite) TearDownTest() {
 }
 
 func (s *StoreSuite) TestNewStore() {
-	g := mock.NewMockGetter(s.ctrl)
+	g := mock.NewMockHttpClient(s.ctrl)
 
 	store := NewStore("", g)
 

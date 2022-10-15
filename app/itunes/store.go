@@ -29,10 +29,10 @@ var Regions = []Region{
 
 type Store struct {
 	url string
-	hc  Getter
+	hc  HttpClient
 }
 
-func NewStore(url string, g Getter) *Store {
+func NewStore(url string, g HttpClient) *Store {
 	if url == "" {
 		url = defaultUrl
 	}
