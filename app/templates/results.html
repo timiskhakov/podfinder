@@ -1,26 +1,24 @@
 {{ define "content" }}
 
 <div class="home">
-    <form class="ui form" name="search" action="/search" method="get">
-        <div class="ui fluid icon input">
-            <input type="text" name="query" placeholder="Search for podcasts" value="{{.Data.Query}}">
-            <i class="search icon"></i>
-        </div>
-    </form>
-    <h3 class="ui dividing header">
-        Search results
-    </h3>
-    <div class="ui middle aligned list">
-        {{range .Data.Podcasts}}
-        <div class="item">
-            <img class="ui tiny image" src="{{.Image}}" />
-            <div class="content">
-                <div class="header"><a href="/{{.Id}}">{{.Name}}</a></div>
-                <div class="description">{{.Artist}}</div>
-            </div>
-        </div>
-        {{end}}
+  <form class="ui form" name="search" action="/search" method="get">
+    <div class="ui fluid icon input">
+      <input type="text" name="query" placeholder="Search for podcasts" value="{{.Data.Query}}">
+      <i class="search icon"></i>
     </div>
+  </form>
+  <h3 class="ui dividing header">Search results</h3>
+  <div class="ui middle aligned list">
+    {{range .Data.Podcasts}}
+      <div class="item">
+        <img class="ui tiny image" src="{{.Image}}" />
+        <div class="content">
+          <div class="header"><a href="/{{.Id}}">{{.Name}}</a></div>
+          <div class="description">{{.Artist}}</div>
+        </div>
+      </div>
+    {{end}}
+  </div>
 </div>
 
 {{ end }}
