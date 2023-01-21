@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/gorilla/mux"
 	"github.com/timiskhakov/podfinder/app/itunes"
 	"html/template"
 	"log"
 	"net/http"
+	"strings"
 )
 
 type App struct {
@@ -23,13 +23,11 @@ type Store interface {
 func NewApp(store Store) *App {
 	a := &App{store: store}
 
-	r := mux.NewRouter()
-	r.PathPrefix("/www/").Handler(http.StripPrefix("/www/", http.FileServer(http.Dir("./www/"))))
+	r := http.NewServeMux()
+	r.Handle("/www/", http.StripPrefix("/www/", http.FileServer(http.Dir("./www/"))))
 
-	r.HandleFunc("/", a.handleHome()).Methods(http.MethodGet)
-	r.HandleFunc("/", a.handleRegion()).Methods(http.MethodPost)
-	r.HandleFunc("/search", a.handleSearch()).Methods(http.MethodGet)
-	r.HandleFunc("/{id:[0-9]+}", a.handlePodcast()).Methods(http.MethodGet)
+	r.HandleFunc("/", a.handleHome())
+	r.HandleFunc("/search", a.handleSearch())
 
 	a.router = r
 
@@ -42,31 +40,43 @@ func (a *App) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 func (a *App) handleHome() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		podcasts, err := a.store.Top(region(r))
-		if err != nil {
-			render(w, r, nil, err, "./templates/base.html", "./templates/error.html")
+		if r.Method == http.MethodPost {
+			a.handleHomePost(w, r)
 			return
 		}
 
-		render(w, r, podcasts, nil, "./templates/base.html", "./templates/home.html")
+		if id := strings.TrimPrefix(r.URL.Path, "/"); id != "" {
+			a.handlePodcast(w, r, id)
+			return
+		}
+
+		a.handleHomeGet(w, r)
 	}
 }
 
-func (a *App) handleRegion() http.HandlerFunc {
-	return func(w http.ResponseWriter, r *http.Request) {
-		if err := r.ParseForm(); err != nil {
-			render(w, r, nil, err, "./templates/base.html", "./templates/error.html")
-			return
-		}
-
-		http.SetCookie(w, &http.Cookie{
-			Name:     "region",
-			Value:    r.Form.Get("region"),
-			HttpOnly: true,
-		})
-
-		http.Redirect(w, r, r.RequestURI, 301)
+func (a *App) handleHomeGet(w http.ResponseWriter, r *http.Request) {
+	podcasts, err := a.store.Top(region(r))
+	if err != nil {
+		render(w, r, nil, err, "./templates/base.html", "./templates/error.html")
+		return
 	}
+
+	render(w, r, podcasts, nil, "./templates/base.html", "./templates/home.html")
+}
+
+func (a *App) handleHomePost(w http.ResponseWriter, r *http.Request) {
+	if err := r.ParseForm(); err != nil {
+		render(w, r, nil, err, "./templates/base.html", "./templates/error.html")
+		return
+	}
+
+	http.SetCookie(w, &http.Cookie{
+		Name:     "region",
+		Value:    r.Form.Get("region"),
+		HttpOnly: true,
+	})
+
+	http.Redirect(w, r, r.RequestURI, 301)
 }
 
 func (a *App) handleSearch() http.HandlerFunc {
@@ -74,6 +84,7 @@ func (a *App) handleSearch() http.HandlerFunc {
 		Query    string
 		Podcasts []*itunes.Podcast
 	}
+
 	return func(w http.ResponseWriter, r *http.Request) {
 		if err := r.ParseForm(); err != nil {
 			render(w, r, nil, err, "./templates/base.html", "./templates/error.html")
@@ -91,30 +102,27 @@ func (a *App) handleSearch() http.HandlerFunc {
 	}
 }
 
-func (a *App) handlePodcast() http.HandlerFunc {
+func (a *App) handlePodcast(w http.ResponseWriter, r *http.Request, id string) {
 	type podcastAndReviews struct {
 		Podcast *itunes.PodcastDetail
 		Reviews []*itunes.Review
 	}
 
-	return func(w http.ResponseWriter, r *http.Request) {
-		id := mux.Vars(r)["id"]
-
-		// TODO(timiskhakov): Obtain podcast and reviews at the same time
-		podcast, err := a.store.Lookup(id)
-		if err != nil {
-			render(w, r, nil, nil, "./templates/base.html", "./templates/404.html")
-			return
-		}
-
-		reviews, err := a.store.Reviews(id, region(r))
-		if err != nil {
-			log.Println(err.Error())
-			reviews = []*itunes.Review{}
-		}
-
-		render(w, r, podcastAndReviews{podcast, reviews}, nil, "./templates/base.html", "./templates/podcast.html")
+	// TODO(timiskhakov): Obtain podcast and reviews at the same time
+	podcast, err := a.store.Lookup(id)
+	if err != nil {
+		render(w, r, nil, nil, "./templates/base.html", "./templates/404.html")
+		return
 	}
+
+	reviews, err := a.store.Reviews(id, region(r))
+	if err != nil {
+		log.Println(err.Error())
+		reviews = []*itunes.Review{}
+	}
+
+	render(w, r, podcastAndReviews{podcast, reviews}, nil, "./templates/base.html", "./templates/podcast.html")
+
 }
 
 func render(w http.ResponseWriter, r *http.Request, data any, err error, templates ...string) {
