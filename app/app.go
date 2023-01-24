@@ -28,20 +28,9 @@ func NewApp(store Store) *App {
 
 	mux := http.NewServeMux()
 	mux.Handle("/www/", http.StripPrefix("/www/", http.FileServer(http.Dir("./www/"))))
-	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		if r.Method == http.MethodPost {
-			a.handleHomePost(w, r)
-			return
-		}
-
-		if id := strings.TrimPrefix(r.URL.Path, "/"); id != "" {
-			a.handlePodcast(w, r, id)
-			return
-		}
-
-		a.handleHomeGet(w, r)
-	})
 	mux.HandleFunc("/search", a.handleSearch())
+	mux.HandleFunc("/podcasts/", a.handlePodcasts())
+	mux.HandleFunc("/", a.handleHome())
 
 	a.mux = mux
 
@@ -52,31 +41,33 @@ func (a *App) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	a.mux.ServeHTTP(w, r)
 }
 
-func (a *App) handleHomeGet(w http.ResponseWriter, r *http.Request) {
-	podcasts, err := a.store.Top(region(r))
-	if err != nil {
-		log.Println(err)
-		render(w, r, nil, "./templates/error.html")
-		return
+func (a *App) handleHome() http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		if r.Method == http.MethodGet {
+			podcasts, err := a.store.Top(region(r))
+			if err != nil {
+				log.Println(err)
+				render(w, r, nil, "./templates/error.html")
+				return
+			}
+
+			render(w, r, podcasts, "./templates/home.html")
+			return
+		}
+
+		if err := r.ParseForm(); err != nil {
+			log.Println(err)
+			render(w, r, nil, "./templates/error.html")
+			return
+		}
+
+		http.SetCookie(w, &http.Cookie{
+			Name:     "region",
+			Value:    r.Form.Get("region"),
+			HttpOnly: true,
+		})
+		http.Redirect(w, r, r.RequestURI, 301)
 	}
-
-	render(w, r, podcasts, "./templates/home.html")
-}
-
-func (a *App) handleHomePost(w http.ResponseWriter, r *http.Request) {
-	if err := r.ParseForm(); err != nil {
-		log.Println(err)
-		render(w, r, nil, "./templates/error.html")
-		return
-	}
-
-	http.SetCookie(w, &http.Cookie{
-		Name:     "region",
-		Value:    r.Form.Get("region"),
-		HttpOnly: true,
-	})
-
-	http.Redirect(w, r, r.RequestURI, 301)
 }
 
 func (a *App) handleSearch() http.HandlerFunc {
@@ -104,42 +95,50 @@ func (a *App) handleSearch() http.HandlerFunc {
 	}
 }
 
-func (a *App) handlePodcast(w http.ResponseWriter, r *http.Request, id string) {
-	type response struct {
-		Podcast *itunes.PodcastDetail
-		Reviews []*itunes.Review
+func (a *App) handlePodcasts() http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		type response struct {
+			Podcast *itunes.PodcastDetail
+			Reviews []*itunes.Review
+		}
+		var (
+			wg      sync.WaitGroup
+			pod     *itunes.PodcastDetail
+			podErr  error
+			rews    []*itunes.Review
+			rewsErr error
+		)
+
+		id := ""
+		if id = strings.TrimPrefix(r.URL.Path, "/podcasts/"); id == "" {
+			render(w, r, nil, "./templates/404.html")
+			return
+		}
+
+		wg.Add(2)
+		go func() {
+			defer wg.Done()
+			pod, podErr = a.store.Lookup(id)
+		}()
+		go func() {
+			defer wg.Done()
+			rews, rewsErr = a.store.Reviews(id, region(r))
+		}()
+		wg.Wait()
+
+		if podErr != nil {
+			log.Println(podErr)
+			render(w, r, nil, "./templates/404.html")
+			return
+		}
+
+		if rewsErr != nil {
+			log.Println(rewsErr)
+			rews = []*itunes.Review{}
+		}
+
+		render(w, r, response{pod, rews}, "./templates/podcast.html")
 	}
-	var (
-		wg      sync.WaitGroup
-		pod     *itunes.PodcastDetail
-		podErr  error
-		rews    []*itunes.Review
-		rewsErr error
-	)
-
-	wg.Add(2)
-	go func() {
-		wg.Done()
-		pod, podErr = a.store.Lookup(id)
-	}()
-	go func() {
-		defer wg.Done()
-		rews, rewsErr = a.store.Reviews(id, region(r))
-	}()
-	wg.Wait()
-
-	if podErr != nil {
-		log.Println(podErr)
-		render(w, r, nil, "./templates/404.html")
-		return
-	}
-
-	if rewsErr != nil {
-		log.Println(rewsErr)
-		rews = []*itunes.Review{}
-	}
-
-	render(w, r, response{pod, rews}, "./templates/podcast.html")
 }
 
 func render(w http.ResponseWriter, r *http.Request, data any, tmpl string) {
