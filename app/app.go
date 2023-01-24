@@ -9,8 +9,8 @@ import (
 )
 
 type App struct {
-	router http.Handler
-	store  Store
+	mux   http.Handler
+	store Store
 }
 
 type Store interface {
@@ -23,19 +23,19 @@ type Store interface {
 func NewApp(store Store) *App {
 	a := &App{store: store}
 
-	r := http.NewServeMux()
-	r.Handle("/www/", http.StripPrefix("/www/", http.FileServer(http.Dir("./www/"))))
+	mux := http.NewServeMux()
+	mux.Handle("/www/", http.StripPrefix("/www/", http.FileServer(http.Dir("./www/"))))
 
-	r.HandleFunc("/", a.handleHome())
-	r.HandleFunc("/search", a.handleSearch())
+	mux.HandleFunc("/", a.handleHome())
+	mux.HandleFunc("/search", a.handleSearch())
 
-	a.router = r
+	a.mux = mux
 
 	return a
 }
 
 func (a *App) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	a.router.ServeHTTP(w, r)
+	a.mux.ServeHTTP(w, r)
 }
 
 func (a *App) handleHome() http.HandlerFunc {
