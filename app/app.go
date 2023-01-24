@@ -109,35 +109,50 @@ func (a *App) handlePodcast(w http.ResponseWriter, r *http.Request, id string) {
 		Podcast *itunes.PodcastDetail
 		Reviews []*itunes.Review
 	}
+	var (
+		wg      sync.WaitGroup
+		pod     *itunes.PodcastDetail
+		podErr  error
+		rews    []*itunes.Review
+		rewsErr error
+	)
 
-	// TODO(timiskhakov): Obtain podcast and reviews at the same time
-	podcast, err := a.store.Lookup(id)
-	if err != nil {
-		log.Println(err)
+	wg.Add(2)
+	go func() {
+		wg.Done()
+		pod, podErr = a.store.Lookup(id)
+	}()
+	go func() {
+		defer wg.Done()
+		rews, rewsErr = a.store.Reviews(id, region(r))
+	}()
+	wg.Wait()
+
+	if podErr != nil {
+		log.Println(podErr)
 		render(w, r, nil, "./templates/404.html")
 		return
 	}
 
-	reviews, err := a.store.Reviews(id, region(r))
-	if err != nil {
-		log.Println(err)
-		reviews = []*itunes.Review{}
+	if rewsErr != nil {
+		log.Println(rewsErr)
+		rews = []*itunes.Review{}
 	}
 
-	render(w, r, response{podcast, reviews}, "./templates/podcast.html")
+	render(w, r, response{pod, rews}, "./templates/podcast.html")
 }
 
 func render(w http.ResponseWriter, r *http.Request, data any, tmpl string) {
-	var (
-		init sync.Once
-		tpl  *template.Template
-		err  error
-	)
 	type response struct {
 		Data    any
 		Region  string
 		Regions []itunes.Region
 	}
+	var (
+		init sync.Once
+		tpl  *template.Template
+		err  error
+	)
 
 	init.Do(func() {
 		tpl, err = template.ParseFiles("./templates/base.html", tmpl)
