@@ -19,51 +19,15 @@ const (
 
 type AppSuite struct {
 	suite.Suite
-	srv  *httptest.Server
+	mux  *http.ServeMux
 	itns *httptest.Server
 	hc   *http.Client
+	srv  *httptest.Server
 }
 
 func (s *AppSuite) SetupTest() {
-	r := http.NewServeMux()
-
-	r.HandleFunc(fmt.Sprintf("/%s/rss/toppodcasts/limit=10/json", rgn), func(w http.ResponseWriter, r *http.Request) {
-		f, err := os.Open("./testdata/lookup.json")
-		s.NoError(err)
-		defer func() { _ = f.Close() }()
-		bytes, err := io.ReadAll(f)
-		s.NoError(err)
-		_, _ = w.Write(bytes)
-	})
-
-	r.HandleFunc(fmt.Sprintf("/search?media=podcast&entity=podcast&country=%s&term=%s", rgn, "Hello+Internet"), func(w http.ResponseWriter, r *http.Request) {
-		f, err := os.Open("./testdata/search.json")
-		s.NoError(err)
-		defer func() { _ = f.Close() }()
-		bytes, err := io.ReadAll(f)
-		s.NoError(err)
-		_, _ = w.Write(bytes)
-	})
-
-	r.HandleFunc(fmt.Sprintf("/lookup?id=%s", podcastId), func(w http.ResponseWriter, r *http.Request) {
-		f, err := os.Open("./testdata/lookup.json")
-		s.NoError(err)
-		defer func() { _ = f.Close() }()
-		bytes, err := io.ReadAll(f)
-		s.NoError(err)
-		_, _ = w.Write(bytes)
-	})
-
-	r.HandleFunc(fmt.Sprintf("/%s/rss/customerreviews/id=%s/json", rgn, podcastId), func(w http.ResponseWriter, r *http.Request) {
-		f, err := os.Open("./testdata/reviews.json")
-		s.NoError(err)
-		defer func() { _ = f.Close() }()
-		bytes, err := io.ReadAll(f)
-		s.NoError(err)
-		_, _ = w.Write(bytes)
-	})
-
-	s.itns = httptest.NewServer(r)
+	s.mux = http.NewServeMux()
+	s.itns = httptest.NewServer(s.mux)
 	s.hc = s.itns.Client()
 	s.srv = httptest.NewServer(NewApp(itunes.NewStore(s.itns.URL, s.hc)))
 }
@@ -82,6 +46,15 @@ func (s *AppSuite) TestNewApp() {
 }
 
 func (s *AppSuite) TestHandleHome() {
+	s.mux.HandleFunc(fmt.Sprintf("/%s/rss/toppodcasts/limit=10/json", rgn), func(w http.ResponseWriter, r *http.Request) {
+		f, err := os.Open("./testdata/lookup.json")
+		s.NoError(err)
+		defer func() { _ = f.Close() }()
+		bytes, err := io.ReadAll(f)
+		s.NoError(err)
+		_, _ = w.Write(bytes)
+	})
+
 	resp, err := s.hc.Get(s.srv.URL)
 
 	s.NoError(err)
@@ -100,6 +73,15 @@ func (s *AppSuite) TestHandleRegion() {
 }
 
 func (s *AppSuite) TestHandleSearch() {
+	s.mux.HandleFunc(fmt.Sprintf("/search?media=podcast&entity=podcast&country=%s&term=%s", rgn, "Hello+Internet"), func(w http.ResponseWriter, r *http.Request) {
+		f, err := os.Open("./testdata/search.json")
+		s.NoError(err)
+		defer func() { _ = f.Close() }()
+		bytes, err := io.ReadAll(f)
+		s.NoError(err)
+		_, _ = w.Write(bytes)
+	})
+
 	resp, err := s.hc.Get(fmt.Sprintf("%s/search", s.srv.URL))
 
 	s.NoError(err)
@@ -107,6 +89,23 @@ func (s *AppSuite) TestHandleSearch() {
 }
 
 func (s *AppSuite) TestHandlePodcast() {
+	s.mux.HandleFunc(fmt.Sprintf("/lookup?id=%s", podcastId), func(w http.ResponseWriter, r *http.Request) {
+		f, err := os.Open("./testdata/lookup.json")
+		s.NoError(err)
+		defer func() { _ = f.Close() }()
+		bytes, err := io.ReadAll(f)
+		s.NoError(err)
+		_, _ = w.Write(bytes)
+	})
+	s.mux.HandleFunc(fmt.Sprintf("/%s/rss/customerreviews/id=%s/json", rgn, podcastId), func(w http.ResponseWriter, r *http.Request) {
+		f, err := os.Open("./testdata/reviews.json")
+		s.NoError(err)
+		defer func() { _ = f.Close() }()
+		bytes, err := io.ReadAll(f)
+		s.NoError(err)
+		_, _ = w.Write(bytes)
+	})
+
 	resp, err := s.hc.Get(fmt.Sprintf("%s/123", s.srv.URL))
 
 	s.NoError(err)

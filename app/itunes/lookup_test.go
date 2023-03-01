@@ -10,7 +10,7 @@ import (
 func (s *StoreSuite) TestLookup() {
 	fh, err := os.Open("../testdata/lookup.json")
 	s.NoError(err)
-	defer fh.Close()
+	defer func() { _ = fh.Close() }()
 	g := mock.NewMockHttpClient(s.ctrl)
 	g.EXPECT().Get(gomock.Any()).Return(&http.Response{
 		StatusCode: http.StatusOK,
