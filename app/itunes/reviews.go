@@ -34,16 +34,16 @@ func (s *Store) Reviews(id, region string) ([]*Review, error) {
 		return nil, err
 	}
 
-	reviews := make([]*Review, len(r.Feed.Reviews))
-	for i, r := range r.Feed.Reviews {
-		reviews[i] = &Review{
+	reviews := make([]*Review, 0, len(r.Feed.Reviews))
+	for _, r := range r.Feed.Reviews {
+		reviews = append(reviews, &Review{
 			Id:      r.Id.Label,
 			Author:  r.Author.Name.Label,
 			Title:   r.Title.Label,
 			Content: r.Content.Label,
 			Rating:  rating(r.Rating.Label),
 			Date:    date(r.Updated.Label),
-		}
+		})
 	}
 
 	return reviews, nil
