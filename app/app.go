@@ -66,7 +66,7 @@ func (a *App) handleHome() http.HandlerFunc {
 			Value:    r.Form.Get("region"),
 			HttpOnly: true,
 		})
-		http.Redirect(w, r, r.RequestURI, 301)
+		http.Redirect(w, r, r.Referer(), 301)
 	}
 }
 
