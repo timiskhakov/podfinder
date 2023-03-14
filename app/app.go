@@ -46,7 +46,7 @@ func (a *App) handleHome() http.HandlerFunc {
 		if r.Method == http.MethodGet {
 			podcasts, err := a.store.Top(region(r))
 			if err != nil {
-				log.Println(err)
+				log.Printf("%v", err)
 				render(w, r, nil, "./templates/error.html")
 				return
 			}
@@ -56,7 +56,7 @@ func (a *App) handleHome() http.HandlerFunc {
 		}
 
 		if err := r.ParseForm(); err != nil {
-			log.Println(err)
+			log.Printf("%v", err)
 			render(w, r, nil, "./templates/error.html")
 			return
 		}
@@ -78,7 +78,7 @@ func (a *App) handleSearch() http.HandlerFunc {
 
 	return func(w http.ResponseWriter, r *http.Request) {
 		if err := r.ParseForm(); err != nil {
-			log.Println(err)
+			log.Printf("%v", err)
 			render(w, r, nil, "./templates/error.html")
 			return
 		}
@@ -86,7 +86,7 @@ func (a *App) handleSearch() http.HandlerFunc {
 		query := r.Form.Get("query")
 		podcasts, err := a.store.Search(region(r), query)
 		if err != nil {
-			log.Println(err)
+			log.Printf("%v", err)
 			render(w, r, nil, "./templates/error.html")
 			return
 		}
@@ -157,7 +157,7 @@ func render(w http.ResponseWriter, r *http.Request, data any, tmpl string) {
 		tpl, err = template.ParseFiles("./templates/base.html", tmpl)
 	})
 	if err != nil {
-		log.Println(err)
+		log.Printf("%v", err)
 		http.Error(w, errorMessage, http.StatusInternalServerError)
 		return
 	}
@@ -167,7 +167,7 @@ func render(w http.ResponseWriter, r *http.Request, data any, tmpl string) {
 		Region:  region(r),
 		Regions: itunes.Regions,
 	}); err != nil {
-		log.Println(err)
+		log.Printf("%v", err)
 		http.Error(w, errorMessage, http.StatusInternalServerError)
 		return
 	}
