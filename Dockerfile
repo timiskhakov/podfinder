@@ -1,6 +1,6 @@
 # Stage 1: Build
 
-FROM golang:1.18-alpine as build
+FROM golang:1.19-alpine as build
 
 RUN apk --no-cache add gcc libc-dev
 
