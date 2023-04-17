@@ -29,7 +29,11 @@ func (s *AppSuite) SetupTest() {
 	s.mux = http.NewServeMux()
 	s.itns = httptest.NewServer(s.mux)
 	s.hc = s.itns.Client()
-	s.srv = httptest.NewServer(NewApp(itunes.NewStore(s.itns.URL, s.hc)))
+
+	app, err := NewApp(itunes.NewStore(s.itns.URL, s.hc))
+	s.NoError(err)
+
+	s.srv = httptest.NewServer(app)
 }
 
 func (s *AppSuite) TearDownTest() {

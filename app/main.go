@@ -23,12 +23,16 @@ func main() {
 }
 
 func run() error {
-	store := itunes.NewStore("", &http.Client{
+	app, err := NewApp(itunes.NewStore("", &http.Client{
 		Timeout: 2 * time.Second,
-	})
+	}))
+	if err != nil {
+		return err
+	}
+
 	srv := http.Server{
 		Addr:              fmt.Sprintf(":%d", port),
-		Handler:           NewApp(store),
+		Handler:           app,
 		IdleTimeout:       30 * time.Second,
 		ReadTimeout:       1 * time.Second,
 		ReadHeaderTimeout: 2 * time.Second,

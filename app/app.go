@@ -1,10 +1,12 @@
 package main
 
 import (
+	"fmt"
 	"github.com/timiskhakov/podfinder/app/itunes"
 	"html/template"
 	"log"
 	"net/http"
+	"path/filepath"
 	"strings"
 	"sync"
 )
@@ -12,8 +14,9 @@ import (
 const errorMessage = "Internal server error"
 
 type App struct {
-	mux   http.Handler
 	store Store
+	mux   http.Handler
+	cache map[string]*template.Template
 }
 
 type Store interface {
@@ -23,7 +26,7 @@ type Store interface {
 	Reviews(id, region string) ([]*itunes.Review, error)
 }
 
-func NewApp(store Store) *App {
+func NewApp(store Store) (*App, error) {
 	a := &App{store: store}
 
 	mux := http.NewServeMux()
@@ -31,10 +34,26 @@ func NewApp(store Store) *App {
 	mux.HandleFunc("/search", a.handleSearch())
 	mux.HandleFunc("/podcasts/", a.handlePodcasts())
 	mux.HandleFunc("/", a.handleHome())
-
 	a.mux = mux
 
-	return a
+	pages, err := filepath.Glob("./templates/*.html")
+	if err != nil {
+		return nil, err
+	}
+
+	cache := make(map[string]*template.Template, len(pages))
+	for _, page := range pages {
+		ts, err := template.ParseFiles("./templates/base.html", page)
+		if err != nil {
+			return nil, err
+		}
+
+		cache[filepath.Base(page)] = ts
+	}
+
+	a.cache = cache
+
+	return a, nil
 }
 
 func (a *App) ServeHTTP(w http.ResponseWriter, r *http.Request) {
@@ -47,17 +66,17 @@ func (a *App) handleHome() http.HandlerFunc {
 			podcasts, err := a.store.Top(region(r))
 			if err != nil {
 				log.Printf("%v", err)
-				render(w, r, nil, "./templates/error.html")
+				a.render(w, r, nil, "error.html")
 				return
 			}
 
-			render(w, r, podcasts, "./templates/home.html")
+			a.render(w, r, podcasts, "home.html")
 			return
 		}
 
 		if err := r.ParseForm(); err != nil {
 			log.Printf("%v", err)
-			render(w, r, nil, "./templates/error.html")
+			a.render(w, r, nil, "error.html")
 			return
 		}
 
@@ -79,7 +98,7 @@ func (a *App) handleSearch() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		if err := r.ParseForm(); err != nil {
 			log.Printf("%v", err)
-			render(w, r, nil, "./templates/error.html")
+			a.render(w, r, nil, "error.html")
 			return
 		}
 
@@ -87,11 +106,11 @@ func (a *App) handleSearch() http.HandlerFunc {
 		podcasts, err := a.store.Search(region(r), query)
 		if err != nil {
 			log.Printf("%v", err)
-			render(w, r, nil, "./templates/error.html")
+			a.render(w, r, nil, "error.html")
 			return
 		}
 
-		render(w, r, response{query, podcasts}, "./templates/results.html")
+		a.render(w, r, response{query, podcasts}, "results.html")
 	}
 }
 
@@ -111,7 +130,7 @@ func (a *App) handlePodcasts() http.HandlerFunc {
 
 		id := ""
 		if id = strings.TrimPrefix(r.URL.Path, "/podcasts/"); id == "" {
-			render(w, r, nil, "./templates/404.html")
+			a.render(w, r, nil, "404.html")
 			return
 		}
 
@@ -128,7 +147,7 @@ func (a *App) handlePodcasts() http.HandlerFunc {
 
 		if podErr != nil {
 			log.Println(podErr)
-			render(w, r, nil, "./templates/404.html")
+			a.render(w, r, nil, "404.html")
 			return
 		}
 
@@ -137,32 +156,25 @@ func (a *App) handlePodcasts() http.HandlerFunc {
 			rews = []*itunes.Review{}
 		}
 
-		render(w, r, response{pod, rews}, "./templates/podcast.html")
+		a.render(w, r, response{pod, rews}, "podcast.html")
 	}
 }
 
-func render(w http.ResponseWriter, r *http.Request, data any, tmpl string) {
+func (a *App) render(w http.ResponseWriter, r *http.Request, data any, tmpl string) {
 	type response struct {
 		Data    any
 		Region  string
 		Regions []itunes.Region
 	}
-	var (
-		init sync.Once
-		tpl  *template.Template
-		err  error
-	)
 
-	init.Do(func() {
-		tpl, err = template.ParseFiles("./templates/base.html", tmpl)
-	})
-	if err != nil {
-		log.Printf("%v", err)
+	t, ok := a.cache[tmpl]
+	if !ok {
+		log.Printf(fmt.Sprintf("can't find template %s", tmpl))
 		http.Error(w, errorMessage, http.StatusInternalServerError)
 		return
 	}
 
-	if err = tpl.Execute(w, &response{
+	if err := t.Execute(w, &response{
 		Data:    data,
 		Region:  region(r),
 		Regions: itunes.Regions,
