@@ -77,40 +77,49 @@ func (s *AppSuite) TestHandleRegion() {
 }
 
 func (s *AppSuite) TestHandleSearch() {
-	s.mux.HandleFunc(fmt.Sprintf("/search?media=podcast&entity=podcast&country=%s&term=%s", rgn, "Hello+Internet"), func(w http.ResponseWriter, r *http.Request) {
+	s.mux.HandleFunc("/search", func(w http.ResponseWriter, r *http.Request) {
 		f, err := os.Open("./testdata/search.json")
 		s.NoError(err)
 		defer func() { _ = f.Close() }()
+
 		bytes, err := io.ReadAll(f)
 		s.NoError(err)
-		_, _ = w.Write(bytes)
+
+		_, err = w.Write(bytes)
+		s.NoError(err)
 	})
 
-	resp, err := s.hc.Get(fmt.Sprintf("%s/search", s.srv.URL))
+	resp, err := s.hc.Get(fmt.Sprintf("%s/search?query=hello+internet", s.srv.URL))
 
 	s.NoError(err)
 	s.Equal(http.StatusOK, resp.StatusCode)
 }
 
 func (s *AppSuite) TestHandlePodcast() {
-	s.mux.HandleFunc(fmt.Sprintf("/lookup?id=%s", podcastId), func(w http.ResponseWriter, r *http.Request) {
+	s.mux.HandleFunc("/lookup", func(w http.ResponseWriter, r *http.Request) {
 		f, err := os.Open("./testdata/lookup.json")
 		s.NoError(err)
 		defer func() { _ = f.Close() }()
+
 		bytes, err := io.ReadAll(f)
 		s.NoError(err)
-		_, _ = w.Write(bytes)
+
+		_, err = w.Write(bytes)
+		s.NoError(err)
 	})
 	s.mux.HandleFunc(fmt.Sprintf("/%s/rss/customerreviews/id=%s/json", rgn, podcastId), func(w http.ResponseWriter, r *http.Request) {
 		f, err := os.Open("./testdata/reviews.json")
 		s.NoError(err)
 		defer func() { _ = f.Close() }()
+
 		bytes, err := io.ReadAll(f)
 		s.NoError(err)
-		_, _ = w.Write(bytes)
+
+		_, err = w.Write(bytes)
+		s.NoError(err)
 	})
 
-	resp, err := s.hc.Get(fmt.Sprintf("%s/123", s.srv.URL))
+	resp, err := s.hc.Get(fmt.Sprintf("%s/podcasts/123", s.srv.URL))
 
 	s.NoError(err)
 	s.Equal(http.StatusOK, resp.StatusCode)
