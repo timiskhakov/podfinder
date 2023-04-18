@@ -12,33 +12,30 @@ import (
 	"testing"
 )
 
-const (
-	rgn       = "us"
-	podcastId = "123"
-)
-
 type AppSuite struct {
 	suite.Suite
-	mux  *http.ServeMux
-	itns *httptest.Server
-	hc   *http.Client
-	srv  *httptest.Server
+	itunesMux    *http.ServeMux
+	itunesServer *httptest.Server
+	httpClient   *http.Client
+	app          *App
+	appServer    *httptest.Server
 }
 
 func (s *AppSuite) SetupTest() {
-	s.mux = http.NewServeMux()
-	s.itns = httptest.NewServer(s.mux)
-	s.hc = s.itns.Client()
+	s.itunesMux = http.NewServeMux()
+	s.itunesServer = httptest.NewServer(s.itunesMux)
+	s.httpClient = s.itunesServer.Client()
 
-	app, err := NewApp(itunes.NewStore(s.itns.URL, s.hc))
+	app, err := NewApp(itunes.NewStore(s.itunesServer.URL, s.httpClient))
 	s.NoError(err)
 
-	s.srv = httptest.NewServer(app)
+	s.app = app
+	s.appServer = httptest.NewServer(app)
 }
 
 func (s *AppSuite) TearDownTest() {
-	s.srv.Close()
-	s.itns.Close()
+	s.appServer.Close()
+	s.itunesServer.Close()
 }
 
 func TestAppSuite(t *testing.T) {
@@ -46,11 +43,12 @@ func TestAppSuite(t *testing.T) {
 }
 
 func (s *AppSuite) TestNewApp() {
-	s.NotNil(s.srv)
+	s.NotNil(s.app)
+	s.Equal(6, len(s.app.cache))
 }
 
-func (s *AppSuite) TestHandleHome() {
-	s.mux.HandleFunc(fmt.Sprintf("/%s/rss/toppodcasts/limit=10/json", rgn), func(w http.ResponseWriter, r *http.Request) {
+func (s *AppSuite) TestHandleHomeGet() {
+	s.itunesMux.HandleFunc("/us/rss/toppodcasts/limit=10/json", func(w http.ResponseWriter, r *http.Request) {
 		f, err := os.Open("./testdata/lookup.json")
 		s.NoError(err)
 		defer func() { _ = f.Close() }()
@@ -59,25 +57,27 @@ func (s *AppSuite) TestHandleHome() {
 		_, _ = w.Write(bytes)
 	})
 
-	resp, err := s.hc.Get(s.srv.URL)
-
+	resp, err := s.httpClient.Get(s.appServer.URL)
 	s.NoError(err)
 	s.Equal(http.StatusOK, resp.StatusCode)
+
+	body, err := io.ReadAll(resp.Body)
+	s.NoError(err)
+	s.Contains(string(body), "Top podcasts")
 }
 
-func (s *AppSuite) TestHandleRegion() {
-	s.hc.CheckRedirect = func(req *http.Request, via []*http.Request) error {
+func (s *AppSuite) TestHandleHomePost() {
+	s.httpClient.CheckRedirect = func(req *http.Request, via []*http.Request) error {
 		return http.ErrUseLastResponse
 	}
 
-	resp, err := s.hc.PostForm(s.srv.URL, url.Values{"region": []string{"fi"}})
-
+	resp, err := s.httpClient.PostForm(s.appServer.URL, url.Values{"region": []string{"fi"}})
 	s.NoError(err)
 	s.Equal(http.StatusMovedPermanently, resp.StatusCode)
 }
 
 func (s *AppSuite) TestHandleSearch() {
-	s.mux.HandleFunc("/search", func(w http.ResponseWriter, r *http.Request) {
+	s.itunesMux.HandleFunc("/search", func(w http.ResponseWriter, r *http.Request) {
 		f, err := os.Open("./testdata/search.json")
 		s.NoError(err)
 		defer func() { _ = f.Close() }()
@@ -89,14 +89,18 @@ func (s *AppSuite) TestHandleSearch() {
 		s.NoError(err)
 	})
 
-	resp, err := s.hc.Get(fmt.Sprintf("%s/search?query=hello+internet", s.srv.URL))
+	resp, err := s.httpClient.Get(fmt.Sprintf("%s/search?query=hello+internet", s.appServer.URL))
 
 	s.NoError(err)
 	s.Equal(http.StatusOK, resp.StatusCode)
+
+	body, err := io.ReadAll(resp.Body)
+	s.NoError(err)
+	s.Contains(string(body), "Search results")
 }
 
 func (s *AppSuite) TestHandlePodcast() {
-	s.mux.HandleFunc("/lookup", func(w http.ResponseWriter, r *http.Request) {
+	s.itunesMux.HandleFunc("/lookup", func(w http.ResponseWriter, r *http.Request) {
 		f, err := os.Open("./testdata/lookup.json")
 		s.NoError(err)
 		defer func() { _ = f.Close() }()
@@ -107,7 +111,7 @@ func (s *AppSuite) TestHandlePodcast() {
 		_, err = w.Write(bytes)
 		s.NoError(err)
 	})
-	s.mux.HandleFunc(fmt.Sprintf("/%s/rss/customerreviews/id=%s/json", rgn, podcastId), func(w http.ResponseWriter, r *http.Request) {
+	s.itunesMux.HandleFunc("/us/rss/customerreviews/id=123/json", func(w http.ResponseWriter, r *http.Request) {
 		f, err := os.Open("./testdata/reviews.json")
 		s.NoError(err)
 		defer func() { _ = f.Close() }()
@@ -119,8 +123,13 @@ func (s *AppSuite) TestHandlePodcast() {
 		s.NoError(err)
 	})
 
-	resp, err := s.hc.Get(fmt.Sprintf("%s/podcasts/123", s.srv.URL))
+	resp, err := s.httpClient.Get(fmt.Sprintf("%s/podcasts/123", s.appServer.URL))
 
 	s.NoError(err)
 	s.Equal(http.StatusOK, resp.StatusCode)
+
+	body, err := io.ReadAll(resp.Body)
+	s.NoError(err)
+	s.Contains(string(body), "Hello Internet")            // Podcast info is in the page
+	s.Contains(string(body), "Re-listening to the show.") // Review is in the page
 }
