@@ -14,9 +14,10 @@ import (
 const errorMessage = "Internal server error"
 
 type App struct {
-	store Store
-	mux   http.Handler
-	cache map[string]*template.Template
+	store   Store
+	limiter Limiter
+	mux     http.Handler
+	cache   map[string]*template.Template
 }
 
 type Store interface {
@@ -26,12 +27,16 @@ type Store interface {
 	Reviews(id, region string) ([]*itunes.Review, error)
 }
 
-func NewApp(store Store) (*App, error) {
-	a := &App{store: store}
+type Limiter interface {
+	Allow() bool
+}
+
+func NewApp(store Store, limiter Limiter) (*App, error) {
+	a := &App{store: store, limiter: limiter}
 
 	mux := http.NewServeMux()
 	mux.Handle("/www/", http.StripPrefix("/www/", http.FileServer(http.Dir("./www/"))))
-	mux.HandleFunc("/search", a.handleSearch())
+	mux.HandleFunc("/search", a.limit(a.handleSearch()))
 	mux.HandleFunc("/podcasts/", a.handlePodcasts())
 	mux.HandleFunc("/", a.handleHome())
 	a.mux = mux
@@ -157,6 +162,17 @@ func (a *App) handlePodcasts() http.HandlerFunc {
 		}
 
 		a.render(w, r, response{pod, rews}, "podcast.html")
+	}
+}
+
+func (a *App) limit(next http.HandlerFunc) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		if !a.limiter.Allow() {
+			a.render(w, r, nil, "limit.html")
+			return
+		}
+
+		next(w, r)
 	}
 }
 

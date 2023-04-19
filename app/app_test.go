@@ -21,12 +21,16 @@ type AppSuite struct {
 	appServer    *httptest.Server
 }
 
+type testLimiter struct{}
+
+func (l *testLimiter) Allow() bool { return true }
+
 func (s *AppSuite) SetupTest() {
 	s.itunesMux = http.NewServeMux()
 	s.itunesServer = httptest.NewServer(s.itunesMux)
 	s.httpClient = s.itunesServer.Client()
 
-	app, err := NewApp(itunes.NewStore(s.itunesServer.URL, s.httpClient))
+	app, err := NewApp(itunes.NewStore(s.itunesServer.URL, s.httpClient), &testLimiter{})
 	s.NoError(err)
 
 	s.app = app
@@ -44,7 +48,7 @@ func TestAppSuite(t *testing.T) {
 
 func (s *AppSuite) TestNewApp() {
 	s.NotNil(s.app)
-	s.Equal(6, len(s.app.cache))
+	s.Equal(7, len(s.app.cache))
 }
 
 func (s *AppSuite) TestHandleHomeGet() {
