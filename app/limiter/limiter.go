@@ -37,10 +37,10 @@ func (l *GlobalLimiter) Allow() bool {
 	l.mutex.Lock()
 	defer l.mutex.Unlock()
 
-	if l.count < l.maxCount {
-		l.count++
-		return true
+	if l.count == l.maxCount {
+		return false
 	}
 
-	return false
+	l.count++
+	return true
 }
