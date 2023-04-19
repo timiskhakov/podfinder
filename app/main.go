@@ -26,7 +26,7 @@ func main() {
 func run() error {
 	s := itunes.NewStore("", &http.Client{Timeout: 2 * time.Second})
 
-	l, stop := limiter.NewGlobalLimiter(2, 1*time.Minute)
+	l, stop := limiter.NewGlobalLimiter(20, 1*time.Minute)
 	defer stop()
 
 	app, err := NewApp(s, l)
