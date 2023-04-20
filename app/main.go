@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 	"github.com/timiskhakov/podfinder/app/itunes"
-	"github.com/timiskhakov/podfinder/app/limiter"
 	"golang.org/x/sync/errgroup"
+	"golang.org/x/time/rate"
 	"log"
 	"net/http"
 	"os"
@@ -25,9 +25,7 @@ func main() {
 
 func run() error {
 	s := itunes.NewStore("", &http.Client{Timeout: 2 * time.Second})
-
-	l, stop := limiter.NewGlobalLimiter(20, 1*time.Minute)
-	defer stop()
+	l := rate.NewLimiter(rate.Every(time.Minute), 20)
 
 	app, err := NewApp(s, l)
 	if err != nil {
