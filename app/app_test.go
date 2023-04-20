@@ -4,7 +4,9 @@ import (
 	"fmt"
 	"github.com/stretchr/testify/suite"
 	"github.com/timiskhakov/podfinder/app/itunes"
+	"golang.org/x/time/rate"
 	"io"
+	"log"
 	"net/http"
 	"net/http/httptest"
 	"net/url"
@@ -21,16 +23,17 @@ type AppSuite struct {
 	appServer    *httptest.Server
 }
 
-type testLimiter struct{}
-
-func (l *testLimiter) Allow() bool { return true }
-
 func (s *AppSuite) SetupTest() {
 	s.itunesMux = http.NewServeMux()
 	s.itunesServer = httptest.NewServer(s.itunesMux)
 	s.httpClient = s.itunesServer.Client()
 
-	app, err := NewApp(itunes.NewStore(s.itunesServer.URL, s.httpClient), &testLimiter{})
+	store := itunes.NewStore(s.itunesServer.URL, s.httpClient)
+	limiter := &rate.Limiter{}
+	infoLog := log.New(os.Stdout, "INFO\t", log.Ldate|log.Ltime)
+	errorLog := log.New(os.Stderr, "ERROR\t", log.Ldate|log.Ltime|log.Lshortfile)
+
+	app, err := NewApp(store, false, limiter, infoLog, errorLog)
 	s.NoError(err)
 
 	s.app = app

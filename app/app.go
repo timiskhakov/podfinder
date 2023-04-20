@@ -14,10 +14,13 @@ import (
 const errorMessage = "Internal server error"
 
 type App struct {
-	store   Store
-	limiter Limiter
-	mux     http.Handler
-	cache   map[string]*template.Template
+	store            Store
+	isLimiterEnabled bool
+	limiter          Limiter
+	mux              http.Handler
+	infoLog          *log.Logger
+	errorLog         *log.Logger
+	cache            map[string]*template.Template
 }
 
 type Store interface {
@@ -31,8 +34,8 @@ type Limiter interface {
 	Allow() bool
 }
 
-func NewApp(store Store, limiter Limiter) (*App, error) {
-	a := &App{store: store, limiter: limiter}
+func NewApp(store Store, isLimiterEnabled bool, limiter Limiter, infoLog, errorLog *log.Logger) (*App, error) {
+	a := &App{store: store, isLimiterEnabled: isLimiterEnabled, limiter: limiter, infoLog: infoLog, errorLog: errorLog}
 
 	mux := http.NewServeMux()
 	mux.Handle("/www/", http.StripPrefix("/www/", http.FileServer(http.Dir("./www/"))))
@@ -70,7 +73,7 @@ func (a *App) handleHome() http.HandlerFunc {
 		if r.Method == http.MethodGet {
 			podcasts, err := a.store.Top(region(r))
 			if err != nil {
-				log.Printf("%v", err)
+				a.errorLog.Printf("%v", err)
 				a.render(w, r, nil, "error.html")
 				return
 			}
@@ -80,7 +83,7 @@ func (a *App) handleHome() http.HandlerFunc {
 		}
 
 		if err := r.ParseForm(); err != nil {
-			log.Printf("%v", err)
+			a.errorLog.Printf("%v", err)
 			a.render(w, r, nil, "error.html")
 			return
 		}
@@ -102,7 +105,7 @@ func (a *App) handleSearch() http.HandlerFunc {
 
 	return func(w http.ResponseWriter, r *http.Request) {
 		if err := r.ParseForm(); err != nil {
-			log.Printf("%v", err)
+			a.errorLog.Printf("%v", err)
 			a.render(w, r, nil, "error.html")
 			return
 		}
@@ -110,7 +113,7 @@ func (a *App) handleSearch() http.HandlerFunc {
 		query := r.Form.Get("query")
 		podcasts, err := a.store.Search(region(r), query)
 		if err != nil {
-			log.Printf("%v", err)
+			a.errorLog.Printf("%v", err)
 			a.render(w, r, nil, "error.html")
 			return
 		}
@@ -151,13 +154,13 @@ func (a *App) handlePodcasts() http.HandlerFunc {
 		wg.Wait()
 
 		if podErr != nil {
-			log.Println(podErr)
+			a.errorLog.Println(podErr)
 			a.render(w, r, nil, "404.html")
 			return
 		}
 
 		if rewsErr != nil {
-			log.Println(rewsErr)
+			a.errorLog.Println(rewsErr)
 			rews = []*itunes.Review{}
 		}
 
@@ -167,7 +170,7 @@ func (a *App) handlePodcasts() http.HandlerFunc {
 
 func (a *App) limit(next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		if !a.limiter.Allow() {
+		if a.isLimiterEnabled && !a.limiter.Allow() {
 			a.render(w, r, nil, "limit.html")
 			return
 		}
@@ -185,7 +188,7 @@ func (a *App) render(w http.ResponseWriter, r *http.Request, data any, tmpl stri
 
 	t, ok := a.cache[tmpl]
 	if !ok {
-		log.Printf(fmt.Sprintf("can't find template %s", tmpl))
+		a.errorLog.Printf(fmt.Sprintf("can't find template %s", tmpl))
 		http.Error(w, errorMessage, http.StatusInternalServerError)
 		return
 	}
@@ -195,7 +198,7 @@ func (a *App) render(w http.ResponseWriter, r *http.Request, data any, tmpl stri
 		Region:  region(r),
 		Regions: itunes.Regions,
 	}); err != nil {
-		log.Printf("%v", err)
+		a.errorLog.Printf("%v", err)
 		http.Error(w, errorMessage, http.StatusInternalServerError)
 		return
 	}

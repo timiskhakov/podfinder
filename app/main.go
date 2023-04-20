@@ -24,10 +24,12 @@ func main() {
 }
 
 func run() error {
-	s := itunes.NewStore("", &http.Client{Timeout: 2 * time.Second})
-	l := rate.NewLimiter(rate.Every(time.Minute), 20)
+	store := itunes.NewStore("", &http.Client{Timeout: 2 * time.Second})
+	limiter := rate.NewLimiter(rate.Every(time.Minute), 20)
+	infoLog := log.New(os.Stdout, "INFO\t", log.Ldate|log.Ltime)
+	errorLog := log.New(os.Stderr, "ERROR\t", log.Ldate|log.Ltime|log.Lshortfile)
 
-	app, err := NewApp(s, l)
+	app, err := NewApp(store, true, limiter, infoLog, errorLog)
 	if err != nil {
 		return err
 	}
@@ -35,6 +37,7 @@ func run() error {
 	srv := http.Server{
 		Addr:              fmt.Sprintf(":%d", port),
 		Handler:           app,
+		ErrorLog:          errorLog,
 		IdleTimeout:       30 * time.Second,
 		ReadTimeout:       1 * time.Second,
 		ReadHeaderTimeout: 2 * time.Second,
@@ -44,7 +47,7 @@ func run() error {
 	errs, ctx := errgroup.WithContext(context.Background())
 
 	errs.Go(func() error {
-		log.Printf("starting server: %d\n", port)
+		infoLog.Printf("starting server: %d\n", port)
 		return srv.ListenAndServe()
 	})
 
@@ -53,7 +56,7 @@ func run() error {
 		signal.Notify(sigs, os.Interrupt, syscall.SIGTERM)
 		<-sigs
 
-		log.Printf("shutting down server: %d\n", port)
+		infoLog.Printf("shutting down server: %d\n", port)
 		tc, cancel := context.WithTimeout(ctx, 5*time.Second)
 		defer cancel()
 
