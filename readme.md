@@ -1,5 +1,10 @@
 # podfinder
 
+## Requirements
+
+- Go 1.20
+- [golangci-lint](https://golangci-lint.run)
+
 ## Running Tests
 
 ```shell
@@ -7,16 +12,21 @@ mockgen -source=./app/itunes/httpclient.go -destination=./app/itunes/mock/mock_h
 go test -v ./...
 ```
 
-## Running Locally
+## Running Linter
 
-Run the following command:
+```shell
+golangci-lint run
+```
+
+## Running Application
+
+Locally:
 ```shell
 go run ./app
 ```
 
-## Running in Docker
+In a Docker container:
 
-Run the following command:
 ```shell
 docker-compose up --build
 ```
