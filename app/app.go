@@ -17,9 +17,9 @@ type App struct {
 	store            Store
 	isLimiterEnabled bool
 	limiter          Limiter
-	mux              http.Handler
 	infoLog          *log.Logger
 	errorLog         *log.Logger
+	mux              http.Handler
 	cache            map[string]*template.Template
 }
 
@@ -34,8 +34,22 @@ type Limiter interface {
 	Allow() bool
 }
 
-func NewApp(store Store, isLimiterEnabled bool, limiter Limiter, infoLog, errorLog *log.Logger) (*App, error) {
-	a := &App{store: store, isLimiterEnabled: isLimiterEnabled, limiter: limiter, infoLog: infoLog, errorLog: errorLog}
+type AppConfig struct {
+	Store            Store
+	IsLimiterEnabled bool
+	Limiter          Limiter
+	InfoLog          *log.Logger
+	ErrorLog         *log.Logger
+}
+
+func NewApp(config *AppConfig) (*App, error) {
+	a := &App{
+		store:            config.Store,
+		isLimiterEnabled: config.IsLimiterEnabled,
+		limiter:          config.Limiter,
+		infoLog:          config.InfoLog,
+		errorLog:         config.ErrorLog,
+	}
 
 	mux := http.NewServeMux()
 	mux.Handle("/www/", http.StripPrefix("/www/", http.FileServer(http.Dir("./www/"))))

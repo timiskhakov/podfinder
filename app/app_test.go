@@ -28,12 +28,13 @@ func (s *AppSuite) SetupTest() {
 	s.itunesServer = httptest.NewServer(s.itunesMux)
 	s.httpClient = s.itunesServer.Client()
 
-	store := itunes.NewStore(s.itunesServer.URL, s.httpClient)
-	limiter := &rate.Limiter{}
-	infoLog := log.New(os.Stdout, "INFO\t", log.Ldate|log.Ltime)
-	errorLog := log.New(os.Stderr, "ERROR\t", log.Ldate|log.Ltime|log.Lshortfile)
-
-	app, err := NewApp(store, false, limiter, infoLog, errorLog)
+	app, err := NewApp(&AppConfig{
+		Store:            itunes.NewStore(s.itunesServer.URL, s.httpClient),
+		IsLimiterEnabled: false,
+		Limiter:          &rate.Limiter{},
+		InfoLog:          log.New(os.Stdout, "INFO\t", log.Ldate|log.Ltime),
+		ErrorLog:         log.New(os.Stderr, "ERROR\t", log.Ldate|log.Ltime|log.Lshortfile),
+	})
 	s.NoError(err)
 
 	s.app = app

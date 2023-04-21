@@ -24,12 +24,16 @@ func main() {
 }
 
 func run() error {
-	store := itunes.NewStore("", &http.Client{Timeout: 2 * time.Second})
-	limiter := rate.NewLimiter(rate.Every(time.Minute), 20)
 	infoLog := log.New(os.Stdout, "INFO\t", log.Ldate|log.Ltime)
 	errorLog := log.New(os.Stderr, "ERROR\t", log.Ldate|log.Ltime|log.Lshortfile)
 
-	app, err := NewApp(store, true, limiter, infoLog, errorLog)
+	app, err := NewApp(&AppConfig{
+		Store:            itunes.NewStore("", &http.Client{Timeout: 2 * time.Second}),
+		IsLimiterEnabled: true,
+		Limiter:          rate.NewLimiter(rate.Every(time.Minute), 20),
+		InfoLog:          infoLog,
+		ErrorLog:         errorLog,
+	})
 	if err != nil {
 		return err
 	}
