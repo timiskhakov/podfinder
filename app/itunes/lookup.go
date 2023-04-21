@@ -2,7 +2,6 @@ package itunes
 
 import (
 	"encoding/json"
-	"errors"
 	"fmt"
 	"io"
 	"net/http"
@@ -21,7 +20,7 @@ func (s *Store) Lookup(id string) (*PodcastDetail, error) {
 		if err != nil {
 			return nil, err
 		}
-		return nil, errors.New(fmt.Sprintf("itunes api error: %s", string(bytes)))
+		return nil, fmt.Errorf("itunes api error: %s", string(bytes))
 	}
 
 	r := lookupResponse{}
@@ -30,7 +29,7 @@ func (s *Store) Lookup(id string) (*PodcastDetail, error) {
 	}
 
 	if len(r.Results) != 1 {
-		return nil, errors.New(fmt.Sprintf("invalid lookup result length: %d, expected 1", len(r.Results)))
+		return nil, fmt.Errorf("invalid lookup result length: %d, expected 1", len(r.Results))
 	}
 
 	return &PodcastDetail{
