@@ -12,6 +12,7 @@ import (
 	"net/url"
 	"os"
 	"testing"
+	"time"
 )
 
 type AppSuite struct {
@@ -140,4 +141,17 @@ func (s *AppSuite) TestHandlePodcast() {
 	s.NoError(err)
 	s.Contains(string(body), "Hello Internet")            // Podcast info is in the page
 	s.Contains(string(body), "Re-listening to the show.") // Review is in the page
+}
+
+func (s *AppSuite) TestLimit() {
+	s.app.isLimiterEnabled = true
+	s.app.limiter = rate.NewLimiter(rate.Every(1*time.Minute), 0)
+
+	resp, err := s.httpClient.Get(fmt.Sprintf("%s/search?query=hello+internet", s.appServer.URL))
+	s.NoError(err)
+	s.Equal(http.StatusOK, resp.StatusCode)
+
+	body, err := io.ReadAll(resp.Body)
+	s.NoError(err)
+	s.Contains(string(body), "An iTunes request limit has been reached")
 }
