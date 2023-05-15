@@ -17,8 +17,6 @@ type App struct {
 	store            Store
 	isLimiterEnabled bool
 	limiter          Limiter
-	infoLog          *log.Logger
-	errorLog         *log.Logger
 	mux              http.Handler
 	cache            map[string]*template.Template
 }
@@ -38,8 +36,6 @@ type AppConfig struct {
 	Store            Store
 	IsLimiterEnabled bool
 	Limiter          Limiter
-	InfoLog          *log.Logger
-	ErrorLog         *log.Logger
 }
 
 func NewApp(config *AppConfig) (*App, error) {
@@ -47,8 +43,6 @@ func NewApp(config *AppConfig) (*App, error) {
 		store:            config.Store,
 		isLimiterEnabled: config.IsLimiterEnabled,
 		limiter:          config.Limiter,
-		infoLog:          config.InfoLog,
-		errorLog:         config.ErrorLog,
 	}
 
 	mux := http.NewServeMux()
@@ -87,7 +81,7 @@ func (a *App) handleHome() http.HandlerFunc {
 		if r.Method == http.MethodGet {
 			podcasts, err := a.store.Top(region(r))
 			if err != nil {
-				a.errorLog.Printf("%v", err)
+				log.Printf("%v", err)
 				a.render(w, r, nil, "error.html")
 				return
 			}
@@ -97,7 +91,7 @@ func (a *App) handleHome() http.HandlerFunc {
 		}
 
 		if err := r.ParseForm(); err != nil {
-			a.errorLog.Printf("%v", err)
+			log.Printf("%v", err)
 			a.render(w, r, nil, "error.html")
 			return
 		}
@@ -119,7 +113,7 @@ func (a *App) handleSearch() http.HandlerFunc {
 
 	return func(w http.ResponseWriter, r *http.Request) {
 		if err := r.ParseForm(); err != nil {
-			a.errorLog.Printf("%v", err)
+			log.Printf("%v", err)
 			a.render(w, r, nil, "error.html")
 			return
 		}
@@ -127,7 +121,7 @@ func (a *App) handleSearch() http.HandlerFunc {
 		query := r.Form.Get("query")
 		podcasts, err := a.store.Search(region(r), query)
 		if err != nil {
-			a.errorLog.Printf("%v", err)
+			log.Printf("%v", err)
 			a.render(w, r, nil, "error.html")
 			return
 		}
@@ -168,13 +162,13 @@ func (a *App) handlePodcasts() http.HandlerFunc {
 		wg.Wait()
 
 		if podErr != nil {
-			a.errorLog.Println(podErr)
+			log.Println(podErr)
 			a.render(w, r, nil, "404.html")
 			return
 		}
 
 		if rewsErr != nil {
-			a.errorLog.Println(rewsErr)
+			log.Println(rewsErr)
 			rews = []*itunes.Review{}
 		}
 
@@ -202,7 +196,7 @@ func (a *App) render(w http.ResponseWriter, r *http.Request, data any, tmpl stri
 
 	t, ok := a.cache[tmpl]
 	if !ok {
-		a.errorLog.Printf(fmt.Sprintf("can't find template %s", tmpl))
+		log.Printf(fmt.Sprintf("can't find template %s", tmpl))
 		http.Error(w, errorMessage, http.StatusInternalServerError)
 		return
 	}
@@ -212,7 +206,7 @@ func (a *App) render(w http.ResponseWriter, r *http.Request, data any, tmpl stri
 		Region:  region(r),
 		Regions: itunes.Regions,
 	}); err != nil {
-		a.errorLog.Printf("%v", err)
+		log.Printf("%v", err)
 		http.Error(w, errorMessage, http.StatusInternalServerError)
 		return
 	}

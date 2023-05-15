@@ -6,7 +6,6 @@ import (
 	"github.com/timiskhakov/podfinder/app/itunes"
 	"golang.org/x/time/rate"
 	"io"
-	"log"
 	"net/http"
 	"net/http/httptest"
 	"net/url"
@@ -33,8 +32,6 @@ func (s *AppSuite) SetupTest() {
 		Store:            itunes.NewStore(s.itunesServer.URL, s.httpClient),
 		IsLimiterEnabled: false,
 		Limiter:          &rate.Limiter{},
-		InfoLog:          log.New(os.Stdout, "INFO\t", log.Ldate|log.Ltime),
-		ErrorLog:         log.New(os.Stderr, "ERROR\t", log.Ldate|log.Ltime|log.Lshortfile),
 	})
 	s.NoError(err)
 
