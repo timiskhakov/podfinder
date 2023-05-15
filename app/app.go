@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"github.com/timiskhakov/podfinder/app/itunes"
 	"html/template"
 	"log"
@@ -196,7 +195,7 @@ func (a *App) render(w http.ResponseWriter, r *http.Request, data any, tmpl stri
 
 	t, ok := a.cache[tmpl]
 	if !ok {
-		log.Printf(fmt.Sprintf("can't find template %s", tmpl))
+		log.Printf("can't find template %s", tmpl)
 		http.Error(w, errorMessage, http.StatusInternalServerError)
 		return
 	}
