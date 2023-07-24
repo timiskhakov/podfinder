@@ -56,17 +56,15 @@ func NewApp(config *AppConfig) (*App, error) {
 		return nil, err
 	}
 
-	cache := make(map[string]*template.Template, len(pages))
+	a.cache = make(map[string]*template.Template, len(pages))
 	for _, page := range pages {
 		ts, err := template.ParseFiles("./templates/base.html", page)
 		if err != nil {
 			return nil, err
 		}
 
-		cache[filepath.Base(page)] = ts
+		a.cache[filepath.Base(page)] = ts
 	}
-
-	a.cache = cache
 
 	return a, nil
 }
