@@ -17,15 +17,21 @@ import (
 const port = 3000
 
 func main() {
-	if err := run(); err != nil {
+	ctx := context.Background()
+	if err := run(ctx); err != nil {
 		_, _ = fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
 }
 
-func run() error {
+func run(ctx context.Context) error {
+	t := http.DefaultTransport.(*http.Transport).Clone()
+	t.MaxIdleConns = 100
+	t.MaxConnsPerHost = 100
+	t.MaxIdleConnsPerHost = 100
+
 	app, err := NewApp(&AppConfig{
-		Store:            itunes.NewStore("", &http.Client{Timeout: 2 * time.Second}),
+		Store:            itunes.NewStore("", &http.Client{Timeout: 2 * time.Second, Transport: t}),
 		IsLimiterEnabled: true,
 		Limiter:          rate.NewLimiter(rate.Every(time.Minute), 20),
 	})
@@ -42,13 +48,11 @@ func run() error {
 		WriteTimeout:      5 * time.Second,
 	}
 
-	errs, ctx := errgroup.WithContext(context.Background())
-
+	errs, ctx := errgroup.WithContext(ctx)
 	errs.Go(func() error {
 		log.Printf("starting server: %d\n", port)
 		return srv.ListenAndServe()
 	})
-
 	errs.Go(func() error {
 		sigs := make(chan os.Signal, 1)
 		signal.Notify(sigs, os.Interrupt, syscall.SIGTERM)

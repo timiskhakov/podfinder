@@ -6,7 +6,6 @@ import (
 	"log"
 	"net/http"
 	"path/filepath"
-	"strings"
 	"sync"
 )
 
@@ -47,7 +46,7 @@ func NewApp(config *AppConfig) (*App, error) {
 	mux := http.NewServeMux()
 	mux.Handle("/www/", http.StripPrefix("/www/", http.FileServer(http.Dir("./www/"))))
 	mux.HandleFunc("/search", a.limit(a.handleSearch()))
-	mux.HandleFunc("/podcasts/", a.handlePodcasts())
+	mux.HandleFunc("/podcast/{id}", a.handlePodcast())
 	mux.HandleFunc("/", a.handleHome())
 	a.mux = mux
 
@@ -127,7 +126,7 @@ func (a *App) handleSearch() http.HandlerFunc {
 	}
 }
 
-func (a *App) handlePodcasts() http.HandlerFunc {
+func (a *App) handlePodcast() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		type response struct {
 			Podcast *itunes.PodcastDetail
@@ -141,8 +140,8 @@ func (a *App) handlePodcasts() http.HandlerFunc {
 			rewsErr error
 		)
 
-		id := ""
-		if id = strings.TrimPrefix(r.URL.Path, "/podcasts/"); id == "" {
+		id := r.PathValue("id")
+		if id == "" {
 			a.render(w, r, nil, "404.html")
 			return
 		}
@@ -163,7 +162,6 @@ func (a *App) handlePodcasts() http.HandlerFunc {
 			a.render(w, r, nil, "404.html")
 			return
 		}
-
 		if rewsErr != nil {
 			log.Println(rewsErr)
 			rews = []*itunes.Review{}

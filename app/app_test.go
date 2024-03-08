@@ -129,7 +129,7 @@ func (s *AppSuite) TestHandlePodcast() {
 		s.NoError(err)
 	})
 
-	resp, err := s.httpClient.Get(fmt.Sprintf("%s/podcasts/123", s.appServer.URL))
+	resp, err := s.httpClient.Get(fmt.Sprintf("%s/podcast/123", s.appServer.URL))
 
 	s.NoError(err)
 	s.Equal(http.StatusOK, resp.StatusCode)
