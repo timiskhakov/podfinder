@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- Go 1.22
+- Go 1.23
 - [golangci-lint](https://golangci-lint.run)
 
 ## Running Tests
